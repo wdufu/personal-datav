@@ -1,0 +1,434 @@
+{
+  "name": "calendar-effectscatter",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.7.2",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "日期图",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "calender_map"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "40",
+      "minHeight": "20"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "echarts2016年某人每天的步数",
+        "fields": {
+          "data": {
+            "description": "日期与步数的对应的关系"
+          }
+        }
+      }
+    },
+    "config": {
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "#404a59"
+      },
+      "title": {
+        "name": "标题",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "text": {
+            "name": "主标题",
+            "type": "text",
+            "default": "2016年某人每天的步数"
+          },
+          "subtext": {
+            "name": "副标题",
+            "type": "text",
+            "default": "数据纯属虚构"
+          },
+          "top": {
+            "name": " 组件离容器上侧的距离",
+            "type": "number",
+            "default": 30
+          },
+          "left": {
+            "name": " 组件离容器左侧的距离",
+            "type": "text",
+            "default": "center"
+          },
+          "textStyle": {
+            "name": "主标题文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              }
+            }
+          }
+        }
+      },
+      "legend": {
+        "name": "图例组件",
+        "type": "group",
+        "children": {
+          "top": {
+            "name": "图例组件离容器上侧的距离",
+            "type": "string",
+            "default": "30"
+          },
+          "left": {
+            "name": "图例组件离容器左侧的距离",
+            "type": "string",
+            "default": "100"
+          },
+          "data": {
+            "name": "图例的数据数组",
+            "type": "array",
+            "default": [
+              {
+                "name": "步数",
+                "value": "步数"
+              },
+              {
+                "name": "Top 12",
+                "value": "Top 12"
+              }
+            ],
+            "child": {
+              "name": "系列<%=i+1%>",
+              "type": "object",
+              "default": "系列",
+              "child": {
+                "name": {
+                  "name": "系列值",
+                  "type": "text",
+                  "default": "系列"
+                }
+              }
+            }
+          },
+          "textStyle": {
+            "name": "图例的公用文本样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              }
+            }
+          }
+        }
+      },
+      "tooltip": {
+        "name": "提示框组件",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "trigger": {
+            "name": "触发类型",
+            "type": "text",
+            "default": "item"
+          }
+        }
+      },
+      "calendar": {
+        "name": "日历坐标系组件",
+        "type": "array",
+        "default": [
+          {
+            "top": 100,
+            "left": "center",
+            "range": [
+              "2016-01-01",
+              "2016-06-30"
+            ],
+            "splitLine": {
+              "show": true,
+              "lineStyle": {
+                "color": "#000",
+                "width": 4,
+                "type": "solid"
+              }
+            },
+            "yearLabel": {
+              "formatter": "{start}  1st",
+              "textStyle": {
+                "color": "#fff"
+              }
+            },
+            "itemStyle": {
+              "normal": {
+                "color": "#323c48",
+                "borderWidth": 1,
+                "borderColor": "#111"
+              }
+            }
+          },
+          {
+            "top": 340,
+            "left": "center",
+            "range": [
+              "2016-07-02",
+              "2016-12-31"
+            ],
+            "splitLine": {
+              "show": true,
+              "lineStyle": {
+                "color": "#000",
+                "width": 4,
+                "type": "solid"
+              }
+            },
+            "yearLabel": {
+              "formatter": "{start}  1st",
+              "textStyle": {
+                "color": "#fff"
+              }
+            },
+            "itemStyle": {
+              "normal": {
+                "color": "#323c48",
+                "borderWidth": 1,
+                "borderColor": "#111"
+              }
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "top": {
+              "name": "calendar组件离容器上侧的距离",
+              "type": "number",
+              "default": 0
+            },
+            "left": {
+              "name": "calendar组件离容器左侧的距离",
+              "type": "text",
+              "default": "center"
+            },
+            "range": {
+              "name": "日历坐标的范围",
+              "type": "array",
+              "default": []
+            },
+            "splitLine": {
+              "name": "日历坐标分隔线的样式",
+              "type": "group",
+              "children": {
+                "show": {
+                  "name": "是否显示分隔线",
+                  "type": "boolean",
+                  "default": true
+                },
+                "lineStyle": {
+                  "name": "分隔线线的样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "分隔线线的颜色",
+                      "type": "color",
+                      "default": "#fff"
+                    },
+                    "width": {
+                      "name": "分隔线线的宽度",
+                      "type": "number",
+                      "default": 4
+                    },
+                    "type": {
+                      "name": "分隔线线的类型",
+                      "type": "text",
+                      "default": "solid"
+                    }
+                  }
+                }
+              }
+            },
+            "yearLabel": {
+              "name": "日历坐标分隔线的样式",
+              "type": "group",
+              "children": {
+                "formatter": {
+                  "name": "格式化年份文本",
+                  "type": "text",
+                  "default": ""
+                },
+                "textStyle": {
+                  "name": "日历文本的样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "日历文本的颜色",
+                      "type": "color",
+                      "default": "fff"
+                    }
+                  }
+                }
+              }
+            },
+            "itemStyle": {
+              "name": "日历格的样式",
+              "type": "group",
+              "children": {
+                "normal": {
+                  "name": "日历格的正常样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "calendar图形的颜色",
+                      "type": "color",
+                      "default": ""
+                    },
+                    "borderWidth": {
+                      "name": "calendar描边线宽",
+                      "type": "number",
+                      "default": 1
+                    },
+                    "borderColor": {
+                      "name": "calendar图形的描边颜色",
+                      "type": "color",
+                      "default": "#111"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "name": "步数",
+            "type": "scatter",
+            "coordinateSystem": "calendar",
+            "itemStyle": {
+              "normal": {
+                "color": "#ddb926"
+              }
+            }
+          },
+          {
+            "name": "步数",
+            "type": "scatter",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 1,
+            "itemStyle": {
+              "normal": {
+                "color": "#ddb926"
+              }
+            }
+          },
+          {
+            "name": "Top 12",
+            "type": "effectScatter",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 1,
+            "showEffectOn": "render",
+            "hoverAnimation": true,
+            "itemStyle": {
+              "normal": {
+                "color": "#f4e925"
+              }
+            },
+            "zlevel": 1
+          },
+          {
+            "name": "Top 12",
+            "type": "effectScatter",
+            "coordinateSystem": "calendar",
+            "showEffectOn": "render",
+            "hoverAnimation": true,
+            "itemStyle": {
+              "normal": {
+                "color": "#f4e925"
+              }
+            },
+            "zlevel": 1
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "name": {
+              "name": "名称",
+              "type": "text",
+              "default": ""
+            },
+            "type": {
+              "name": "类型",
+              "type": "text",
+              "default": ""
+            },
+            "coordinateSystem": {
+              "name": "系列使用的坐标系",
+              "type": "text",
+              "default": "calendar"
+            },
+            "calendarIndex": {
+              "name": "使用的日历坐标系的 index",
+              "type": "number",
+              "default": 0
+            },
+            "showEffectOn": {
+              "name": "配置何时显示特效",
+              "type": "text",
+              "default": ""
+            },
+            "hoverAnimation": {
+              "name": "是否开启鼠标 hover 的提示动画效果",
+              "type": "boolean",
+              "default": false
+            },
+            "zlevel": {
+              "name": "所有图形的 zlevel 值",
+              "type": "number",
+              "default": 0
+            },
+            "itemStyle": {
+              "name": "图形样式",
+              "type": "group",
+              "children": {
+                "normal": {
+                  "name": "图形的正常样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "图形的颜色",
+                      "type": "color",
+                      "default": ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
