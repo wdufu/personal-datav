@@ -1,0 +1,509 @@
+{
+  "name": "@dkbike/anscombe-quartet",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.7.2",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "线性回归",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      ""
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "利用点进行描绘线性回归",
+        "fields": {
+          "x": {
+            "description": "x坐标轴值"
+          },
+          "y": {
+            "description": "y坐标轴值"
+          },
+          "s": {
+            "description": "系列值"
+          }
+        }
+      }
+    },
+    "config": {
+      "title": {
+        "name": "标题",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "text": {
+            "name": "标题",
+            "type": "text",
+            "default": "Anscombe's quartet"
+          },
+          "top": {
+            "name": " 组件离容器上侧的距离",
+            "type": "number",
+            "default": 0
+          },
+          "left": {
+            "name": " 组件的对齐方式",
+            "type": "select",
+            "options": [
+              {
+                "name": "左对齐",
+                "value": "left"
+              },
+              {
+                "name": "右对齐",
+                "value": "right"
+              },
+              {
+                "name": "居中对齐",
+                "value": "center"
+              }
+            ],
+            "default": "center"
+          }
+        }
+      },
+      "grid": {
+        "name": "直角坐标系内绘图网格",
+        "type": "array",
+        "default": [
+          {
+            "x": "7%",
+            "y": "7%",
+            "width": "38%",
+            "height": "38%"
+          },
+          {
+            "x2": "7%",
+            "y": "7%",
+            "width": "38%",
+            "height": "38%"
+          },
+          {
+            "x": "7%",
+            "y2": "7%",
+            "width": "38%",
+            "height": "38%"
+          },
+          {
+            "x2": "7%",
+            "y2": "7%",
+            "width": "38%",
+            "height": "38%"
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "width": {
+              "name": "grid 组件的宽度",
+              "type": "text",
+              "default": ""
+            },
+            "height": {
+              "name": "grid 组件的高度",
+              "type": "text",
+              "default": ""
+            }
+          }
+        }
+      },
+      "tooltip": {
+        "name": "提示框组件",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "formatter": {
+            "name": "提示框浮层内容格式器",
+            "type": "text",
+            "default": "Group {a}: ({c})"
+          }
+        }
+      },
+      "xAxis": {
+        "name": "直角坐标系 grid 中的 x 轴",
+        "type": "array",
+        "default": [
+          {
+            "gridIndex": 0,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 1,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 2,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 3,
+            "min": 0,
+            "max": 20
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "gridIndex": {
+              "name": "所在的 grid 的索引",
+              "type": "number",
+              "default": 0
+            },
+            "min": {
+              "name": "坐标轴刻度最小值",
+              "type": "number",
+              "default": 0
+            },
+            "max": {
+              "name": "坐标轴刻度最大值",
+              "type": "number",
+              "default": 0
+            }
+          }
+        }
+      },
+      "yAxis": {
+        "name": "直角坐标系 grid 中的 y 轴",
+        "type": "array",
+        "default": [
+          {
+            "gridIndex": 0,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 1,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 2,
+            "min": 0,
+            "max": 20
+          },
+          {
+            "gridIndex": 3,
+            "min": 0,
+            "max": 20
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "gridIndex": {
+              "name": "所在的 grid 的索引",
+              "type": "number",
+              "default": 0
+            },
+            "min": {
+              "name": "坐标轴刻度最小值",
+              "type": "number",
+              "default": 0
+            },
+            "max": {
+              "name": "坐标轴刻度最大值",
+              "type": "number",
+              "default": 0
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "name": "I",
+            "type": "scatter",
+            "xAxisIndex": 0,
+            "yAxisIndex": 0,
+            "markLine": {
+              "animation": false,
+              "label": {
+                "normal": {
+                  "textStyle": {
+                    "align": "right"
+                  }
+                }
+              },
+              "lineStyle": {
+                "normal": {
+                  "type": "solid"
+                }
+              },
+              "data": [
+                [
+                  {
+                    "coord": [
+                      0,
+                      3
+                    ],
+                    "symbol": "none"
+                  },
+                  {
+                    "coord": [
+                      20,
+                      13
+                    ],
+                    "symbol": "none"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "name": "II",
+            "type": "scatter",
+            "xAxisIndex": 1,
+            "yAxisIndex": 1,
+            "markLine": {
+              "animation": false,
+              "label": {
+                "normal": {
+                  "textStyle": {
+                    "align": "right"
+                  }
+                }
+              },
+              "lineStyle": {
+                "normal": {
+                  "type": "solid"
+                }
+              },
+              "data": [
+                [
+                  {
+                    "coord": [
+                      0,
+                      3
+                    ],
+                    "symbol": "none"
+                  },
+                  {
+                    "coord": [
+                      20,
+                      13
+                    ],
+                    "symbol": "none"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "name": "III",
+            "type": "scatter",
+            "xAxisIndex": 2,
+            "yAxisIndex": 2,
+            "markLine": {
+              "animation": false,
+              "label": {
+                "normal": {
+                  "textStyle": {
+                    "align": "right"
+                  }
+                }
+              },
+              "lineStyle": {
+                "normal": {
+                  "type": "solid"
+                }
+              },
+              "data": [
+                [
+                  {
+                    "coord": [
+                      0,
+                      3
+                    ],
+                    "symbol": "none"
+                  },
+                  {
+                    "coord": [
+                      20,
+                      13
+                    ],
+                    "symbol": "none"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "name": "IV",
+            "type": "scatter",
+            "xAxisIndex": 3,
+            "yAxisIndex": 3,
+            "markLine": {
+              "animation": false,
+              "label": {
+                "normal": {
+                  "textStyle": {
+                    "align": "right"
+                  }
+                }
+              },
+              "lineStyle": {
+                "normal": {
+                  "type": "solid"
+                }
+              },
+              "data": [
+                [
+                  {
+                    "coord": [
+                      0,
+                      3
+                    ],
+                    "symbol": "none"
+                  },
+                  {
+                    "coord": [
+                      20,
+                      13
+                    ],
+                    "symbol": "none"
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "name": {
+              "name": "系列名称",
+              "type": "text",
+              "default": ""
+            },
+            "type": {
+              "name": "类型",
+              "type": "text",
+              "default": "scatter"
+            },
+            "xAxisIndex": {
+              "name": "x轴所在的 grid 的索引",
+              "type": "number",
+              "default": 0
+            },
+            "yAxisIndex": {
+              "name": "y轴所在的 grid 的索引",
+              "type": "number",
+              "default": 0
+            },
+            "markLine": {
+              "name": "图表标线",
+              "type": "group",
+              "children": {
+                "animation": {
+                  "name": "是否开启动画",
+                  "type": "boolean",
+                  "default": false
+                },
+                "label": {
+                  "name": "图形上的文本标签",
+                  "type": "group",
+                  "children": {
+                    "normal": {
+                      "name": "文本的正常样式",
+                      "type": "group",
+                      "children": {
+                        "textStyle": {
+                          "name": "文本样式",
+                          "type": "group",
+                          "children": {
+                            "align": {
+                              "name": " 文本的对齐方式",
+                              "type": "select",
+                              "options": [
+                                {
+                                  "name": "左对齐",
+                                  "value": "left"
+                                },
+                                {
+                                  "name": "右对齐",
+                                  "value": "right"
+                                },
+                                {
+                                  "name": "居中对齐",
+                                  "value": "center"
+                                }
+                              ],
+                              "default": "center"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "lineStyle": {
+                  "name": "标线的样式",
+                  "type": "group",
+                  "children": {
+                    "normal": {
+                      "name": "文本的正常样式",
+                      "type": "group",
+                      "children": {
+                        "type": {
+                          "name": " 文本的对齐方式",
+                          "type": "select",
+                          "options": [
+                            {
+                              "name": "实线",
+                              "value": "solid"
+                            },
+                            {
+                              "name": "虚线",
+                              "value": "dashed"
+                            },
+                            {
+                              "name": "点",
+                              "value": "dotted"
+                            }
+                          ],
+                          "default": "solid"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
