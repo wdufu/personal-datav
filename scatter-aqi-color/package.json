@@ -1,0 +1,750 @@
+{
+  "name": "@dkbike/scatter-aqi-color",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.7.2",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "气泡图",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      ""
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "AQI指数气泡图",
+        "fields": {
+          "date": {
+            "description": "日期序号"
+          },
+          "aqi": {
+            "description": "AQI指数"
+          },
+          "pm1": {
+            "description": "PM2.5指数"
+          },
+          "pm2": {
+            "description": "PM10指数"
+          },
+          "co": {
+            "description": "一氧化碳指数"
+          },
+          "no2": {
+            "description": "二氧化氮指数"
+          },
+          "so2": {
+            "description": "二氧化硫指数"
+          },
+          "des": {
+            "description": "空气质量描述"
+          },
+          "city": {
+            "description": "城市"
+          }
+        }
+      }
+    },
+    "config": {
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "#404a59"
+      },
+      "color": {
+        "name": "调色盘颜色列表",
+        "type": "array",
+        "default": [
+          {
+            "name": "color1",
+            "value": "#dd4444"
+          },
+          {
+            "name": "color2",
+            "value": "#fec42c"
+          },
+          {
+            "name": "color3",
+            "value": "#80F1BE"
+          }
+        ],
+        "child": {
+          "name": "颜色系列<%=i+1%>",
+          "type": "object",
+          "child": {
+            "name": {
+              "name": "颜色",
+              "type": "text",
+              "default": ""
+            },
+            "value": {
+              "name": "颜色色值",
+              "type": "color",
+              "default": ""
+            }
+          }
+        }
+      },
+      "legend": {
+        "name": "图例组件",
+        "type": "group",
+        "children": {
+          "top": {
+            "name": "图例组件离容器上侧的距离",
+            "type": "select",
+            "options": [
+              {
+                "name": "顶部对齐",
+                "value": "top"
+              },
+              {
+                "name": "居中对齐",
+                "value": "middle"
+              },
+              {
+                "name": "底部对齐",
+                "value": "bottom"
+              }
+            ],
+            "default": "top"
+          },
+          "data": {
+            "name": "图例的数据数组",
+            "type": "array",
+            "default": [
+              {
+                "name": "北京",
+                "value": "北京"
+              },
+              {
+                "name": "广州",
+                "value": "广州"
+              },
+              {
+                "name": "上海",
+                "value": "上海"
+              }
+            ],
+            "child": {
+              "name": "城市<%=i+1%>",
+              "type": "object",
+              "default": "",
+              "child": {
+                "name": {
+                  "name": "城市",
+                  "type": "text",
+                  "default": ""
+                },
+                "value": {
+                  "name": "城市名",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            }
+          },
+          "textStyle": {
+            "name": "图例的公用文本样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              },
+              "fontSize": {
+                "name": "字号",
+                "type": "number",
+                "default": 16
+              }
+            }
+          }
+        }
+      },
+      "grid": {
+        "name": "直角坐标系内绘图网格",
+        "type": "group",
+        "children": {
+          "left": {
+            "name": "grid 组件离容器左侧的距离",
+            "type": "text",
+            "default": "10%"
+          },
+          "right": {
+            "name": "grid 组件离容器右侧的距离",
+            "type": "number",
+            "default": 150
+          },
+          "top": {
+            "name": "grid 组件离容器上侧的距离",
+            "type": "text",
+            "default": "18%"
+          },
+          "bottom": {
+            "name": "grid 组件离容器下侧的距离",
+            "type": "text",
+            "default": "10%"
+          }
+        }
+      },
+      "tooltip": {
+        "name": "提示框组件",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "padding": {
+            "name": "提示框浮层内边距",
+            "type": "number",
+            "default": 10
+          },
+          "backgroundColor": {
+            "name": "提示框浮层的背景颜色",
+            "type": "color",
+            "default": "#222"
+          },
+          "borderColor": {
+            "name": "提示框浮层的边框颜色",
+            "type": "color",
+            "default": "#777"
+          },
+          "borderWidth": {
+            "name": "提示框浮层的边框宽",
+            "type": "number",
+            "default": 1
+          }
+        }
+      },
+      "xAxis": {
+        "name": "直角坐标系 grid 中的 x 轴",
+        "type": "group",
+        "children": {
+          "type": {
+            "name": "坐标轴类型",
+            "type": "select",
+            "options": [
+              {
+                "name": "数值轴",
+                "value": "value"
+              },
+              {
+                "name": "类目轴",
+                "value": "category"
+              },
+              {
+                "name": "时间轴",
+                "value": "time"
+              },
+              {
+                "name": "对数轴",
+                "value": "log"
+              }
+            ],
+            "default": "value"
+          },
+          "name": {
+            "name": "坐标轴名称",
+            "type": "text",
+            "default": "日期"
+          },
+          "nameGap": {
+            "name": "坐标轴名称与轴线之间的距离",
+            "type": "number",
+            "default": 16
+          },
+          "nameTextStyle": {
+            "name": "坐标轴名称的文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              },
+              "fontSize": {
+                "name": "字号",
+                "type": "number",
+                "default": 14
+              }
+            }
+          },
+          "max": {
+            "name": "坐标轴刻度最大值",
+            "type": "number",
+            "default": 31
+          },
+          "splitLine": {
+            "name": "坐标轴在 grid 区域中的分隔线",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "是否显示分隔线",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "axisLine": {
+            "name": "坐标轴轴线相关设置",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "坐标轴轴线相关设置",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "坐标轴线线的颜色",
+                    "type": "color",
+                    "default": "#eee"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "yAxis": {
+        "name": "直角坐标系 grid 中的 y 轴",
+        "type": "group",
+        "children": {
+          "type": {
+            "name": "坐标轴类型",
+            "type": "select",
+            "options": [
+              {
+                "name": "数值轴",
+                "value": "value"
+              },
+              {
+                "name": "类目轴",
+                "value": "category"
+              },
+              {
+                "name": "时间轴",
+                "value": "time"
+              },
+              {
+                "name": "对数轴",
+                "value": "log"
+              }
+            ],
+            "default": "value"
+          },
+          "nameLocation": {
+            "name": "坐标轴名称显示位置",
+            "type": "select",
+            "options": [
+              {
+                "name": "顶部",
+                "value": "start"
+              },
+              {
+                "name": "中间",
+                "value": "middle"
+              },
+              {
+                "name": "底部",
+                "value": "end"
+              }
+            ],
+            "default": "end"
+          },
+          "name": {
+            "name": "坐标轴名称",
+            "type": "text",
+            "default": "AQI指数"
+          },
+          "nameGap": {
+            "name": "坐标轴名称与轴线之间的距离",
+            "type": "number",
+            "default": 20
+          },
+          "nameTextStyle": {
+            "name": "坐标轴名称的文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              },
+              "fontSize": {
+                "name": "字号",
+                "type": "number",
+                "default": 16
+              }
+            }
+          },
+          "splitLine": {
+            "name": "坐标轴在 grid 区域中的分隔线",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "是否显示分隔线",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "axisLine": {
+            "name": "坐标轴轴线相关设置",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "坐标轴轴线相关设置",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "坐标轴线线的颜色",
+                    "type": "color",
+                    "default": "#eee"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "visualMap": {
+        "name": "视觉映射组件",
+        "type": "array",
+        "default": [
+          {
+            "left": "right",
+            "top": "10%",
+            "dimension": 2,
+            "min": 0,
+            "max": 250,
+            "itemWidth": 30,
+            "itemHeight": 120,
+            "calculable": true,
+            "precision": 0.1,
+            "text": "圆形大小：PM2.5",
+            "textGap": 30,
+            "textStyle": {
+                "color": "#fff"
+            },
+            "inRange": {
+                "symbolSize": "[10, 90]"
+            },
+            "outOfRange": {
+                "symbolSize": "[10, 70]",
+                "color": "rgba(255,255,255,.2)"
+            },
+            "controller": {
+                "inRange": {
+                    "color": "#c23531"
+                },
+                "outOfRange": {
+                    "color": "#444"
+                }
+            }
+          },
+          {
+            "left": "right",
+            "bottom": "5%",
+            "dimension": 6,
+            "min": 0,
+            "max": 50,
+            "itemWidth": 30,
+            "itemHeight": 120,
+            "calculable": true,
+            "precision": 0.1,
+            "text": "明暗：二氧化硫",
+            "textGap": 30,
+            "textStyle": {
+                "color": "#fff"
+            },
+            "inRange": {
+                "colorLightness": "[1, 0.5]"
+            },
+            "outOfRange": {
+                "color": "rgba(255,255,255,.2)"
+            },
+            "controller": {
+                "inRange": {
+                    "color": "#c23531"
+                },
+                "outOfRange": {
+                    "color": "#444"
+                }
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "视觉映射<%= i+1 %>",
+          "child": {
+            "left": {
+              "name": "组件离容器左侧的距离",
+              "type": "select",
+              "options": [
+                {
+                  "name": "左对齐",
+                  "value": "left"
+                },
+                {
+                  "name": "居中对齐",
+                  "value": "center"
+                },
+                {
+                  "name": "右对齐",
+                  "value": "right"
+                }
+              ],
+              "default": "right"
+            },
+            "top": {
+              "name": "组件离容器上侧的距离",
+              "type": "text",
+              "default": ""
+            },
+            "bottom": {
+              "name": "组件离容器下侧的距离",
+              "type": "text",
+              "default": ""
+            },
+            "dimension": {
+              "name": "数据的维度",
+              "type": "number",
+              "default": 0
+            },
+            "min": {
+              "name": "组件的允许的最小值",
+              "type": "number",
+              "default": 0
+            },
+            "max": {
+              "name": "组件的允许的最大值",
+              "type": "number",
+              "default": 0
+            },
+            "itemWidth": {
+              "name": "图形的宽度",
+              "type": "number",
+              "default": 0
+            },
+            "itemHeight": {
+              "name": "图形的高度",
+              "type": "number",
+              "default": 120
+            },
+            "calculable": {
+              "name": "是否显示拖拽用的手柄",
+              "type": "boolean",
+              "default": true
+            },
+            "precision": {
+              "name": "数据展示的小数精度",
+              "type": "number",
+              "default": 0
+            },
+            "text": {
+              "name": "两端的文本",
+              "type": "text",
+              "default": ""
+            },
+            "textGap": {
+              "name": "两端文字主体之间的距离",
+              "type": "number",
+              "default": 30
+            },
+            "textStyle": {
+              "name": "文字的样式",
+              "type": "group",
+              "children": {
+                "color": {
+                  "name": "文字的颜色",
+                  "type": "color",
+                  "default": ""
+                }
+              }
+            },
+            "inRange": {
+              "name": "在选中范围中的视觉元素",
+              "type": "group",
+              "children": {
+                "symbolSize": {
+                  "name": "图元的大小",
+                  "type": "text",
+                  "default": ""
+                },
+                "colorLightness": {
+                  "name": "颜色的明暗度",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            },
+            "outOfRange": {
+              "name": "在选中范围外的视觉元素",
+              "type": "group",
+              "children": {
+                "symbolSize": {
+                  "name": "图元的大小",
+                  "type": "text",
+                  "default": ""
+                },
+                "color": {
+                  "name": "图元颜色",
+                  "type": "color",
+                  "default": ""
+                }
+              }
+            },
+            "controller": {
+              "name": "控制器",
+              "type": "group",
+              "children": {
+                "inRange": {
+                  "name": "在选中范围中的视觉元素",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "图元颜色",
+                      "type": "color",
+                      "default": ""
+                    }
+                  }
+                },
+                "outOfRange": {
+                  "name": "在选中范围外的视觉元素",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "图元颜色",
+                      "type": "color",
+                      "default": ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "name": "北京",
+            "type": "scatter",
+            "itemStyle": {
+              "normal": {
+                "opacity": 0.8,
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowOffsetY": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          },
+          {
+            "name": "上海",
+            "type": "scatter",
+            "itemStyle": {
+              "normal": {
+                "opacity": 0.8,
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowOffsetY": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          },
+          {
+            "name": "广州",
+            "type": "scatter",
+            "itemStyle": {
+              "normal": {
+                "opacity": 0.8,
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowOffsetY": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "name": {
+              "name": "系列名称",
+              "type": "text",
+              "default": ""
+            },
+            "type": {
+              "name": "类型",
+              "type": "select",
+              "options": [
+                {
+                  "name": "scatter",
+                  "value": "scatter"
+                }
+              ],
+              "default": "scatter"
+            },
+            "itemStyle": {
+              "name": "图形样式",
+              "type": "group",
+              "children": {
+                "normal": {
+                  "name": "默认状态下的样式",
+                  "type": "group",
+                  "children": {
+                    "opacity": {
+                      "name": "图形透明度",
+                      "type": "number",
+                      "default": 0.8,
+                      "min": 0,
+                      "max": 1
+                    },
+                    "shadowBlur": {
+                      "name": "图形阴影的模糊大小",
+                      "type": "number",
+                      "default": 10
+                    },
+                    "shadowOffsetX": {
+                      "name": "阴影水平方向上的偏移距离",
+                      "type": "number",
+                      "default": 0
+                    },
+                    "shadowOffsetY": {
+                      "name": "阴影垂直方向上的偏移距离",
+                      "type": "number",
+                      "default": 0
+                    },
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "rgba(0, 0, 0, 0.5)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
