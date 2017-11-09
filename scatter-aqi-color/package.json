@@ -8,7 +8,7 @@
     "lodash": "4.6.1"
   },
   "datav": {
-    "cn_name": "气泡图",
+    "cn_name": "交互联动气泡图",
     "icon": "",
     "protocol": 2,
     "type": [
@@ -62,7 +62,7 @@
         "default": "#404a59"
       },
       "color": {
-        "name": "调色盘颜色列表",
+        "name": "颜色",
         "type": "array",
         "default": [
           {
@@ -79,7 +79,7 @@
           }
         ],
         "child": {
-          "name": "颜色系列<%=i+1%>",
+          "name": "系列<%=i+1%>",
           "type": "object",
           "child": {
             "name": {
@@ -88,7 +88,7 @@
               "default": ""
             },
             "value": {
-              "name": "颜色色值",
+              "name": "色值",
               "type": "color",
               "default": ""
             }
@@ -96,11 +96,11 @@
         }
       },
       "legend": {
-        "name": "图例组件",
+        "name": "图例",
         "type": "group",
         "children": {
           "top": {
-            "name": "图例组件离容器上侧的距离",
+            "name": "对齐方式",
             "type": "select",
             "options": [
               {
@@ -119,7 +119,7 @@
             "default": "top"
           },
           "data": {
-            "name": "图例的数据数组",
+            "name": "图例数据",
             "type": "array",
             "default": [
               {
@@ -154,7 +154,7 @@
             }
           },
           "textStyle": {
-            "name": "图例的公用文本样式",
+            "name": "图例文本",
             "type": "group",
             "children": {
               "color": {
@@ -172,33 +172,33 @@
         }
       },
       "grid": {
-        "name": "直角坐标系内绘图网格",
+        "name": "图标位置",
         "type": "group",
         "children": {
           "left": {
-            "name": "grid 组件离容器左侧的距离",
+            "name": "左侧",
             "type": "text",
             "default": "10%"
           },
           "right": {
-            "name": "grid 组件离容器右侧的距离",
+            "name": "右侧",
             "type": "number",
             "default": 150
           },
           "top": {
-            "name": "grid 组件离容器上侧的距离",
+            "name": "上侧",
             "type": "text",
             "default": "18%"
           },
           "bottom": {
-            "name": "grid 组件离容器下侧的距离",
+            "name": "下侧",
             "type": "text",
             "default": "10%"
           }
         }
       },
       "tooltip": {
-        "name": "提示框组件",
+        "name": "提示框",
         "type": "group",
         "children": {
           "show": {
@@ -207,33 +207,33 @@
             "default": true
           },
           "padding": {
-            "name": "提示框浮层内边距",
+            "name": "内边距",
             "type": "number",
             "default": 10
           },
           "backgroundColor": {
-            "name": "提示框浮层的背景颜色",
+            "name": "背景色",
             "type": "color",
             "default": "#222"
           },
           "borderColor": {
-            "name": "提示框浮层的边框颜色",
+            "name": "边框色",
             "type": "color",
             "default": "#777"
           },
           "borderWidth": {
-            "name": "提示框浮层的边框宽",
+            "name": "边框宽度",
             "type": "number",
             "default": 1
           }
         }
       },
       "xAxis": {
-        "name": "直角坐标系 grid 中的 x 轴",
+        "name": "x轴",
         "type": "group",
         "children": {
           "type": {
-            "name": "坐标轴类型",
+            "name": "x轴类型",
             "type": "select",
             "options": [
               {
@@ -256,17 +256,17 @@
             "default": "value"
           },
           "name": {
-            "name": "坐标轴名称",
+            "name": "x轴名称",
             "type": "text",
             "default": "日期"
           },
           "nameGap": {
-            "name": "坐标轴名称与轴线之间的距离",
+            "name": "名称间距",
             "type": "number",
             "default": 16
           },
           "nameTextStyle": {
-            "name": "坐标轴名称的文字样式",
+            "name": "名称样式",
             "type": "group",
             "children": {
               "color": {
@@ -282,12 +282,12 @@
             }
           },
           "max": {
-            "name": "坐标轴刻度最大值",
+            "name": "刻度最大值",
             "type": "number",
             "default": 31
           },
           "splitLine": {
-            "name": "坐标轴在 grid 区域中的分隔线",
+            "name": "x轴分隔线",
             "type": "group",
             "children": {
               "show": {
@@ -298,15 +298,15 @@
             }
           },
           "axisLine": {
-            "name": "坐标轴轴线相关设置",
+            "name": "x轴设置",
             "type": "group",
             "children": {
               "lineStyle": {
-                "name": "坐标轴轴线相关设置",
+                "name": "x轴样式",
                 "type": "group",
                 "children": {
                   "color": {
-                    "name": "坐标轴线线的颜色",
+                    "name": "x轴颜色",
                     "type": "color",
                     "default": "#eee"
                   }
@@ -317,11 +317,11 @@
         }
       },
       "yAxis": {
-        "name": "直角坐标系 grid 中的 y 轴",
+        "name": "y轴",
         "type": "group",
         "children": {
           "type": {
-            "name": "坐标轴类型",
+            "name": "y轴类型",
             "type": "select",
             "options": [
               {
@@ -344,7 +344,7 @@
             "default": "value"
           },
           "nameLocation": {
-            "name": "坐标轴名称显示位置",
+            "name": "名称位置",
             "type": "select",
             "options": [
               {
@@ -363,17 +363,17 @@
             "default": "end"
           },
           "name": {
-            "name": "坐标轴名称",
+            "name": "名称",
             "type": "text",
             "default": "AQI指数"
           },
           "nameGap": {
-            "name": "坐标轴名称与轴线之间的距离",
+            "name": "名称间距",
             "type": "number",
             "default": 20
           },
           "nameTextStyle": {
-            "name": "坐标轴名称的文字样式",
+            "name": "名称样式",
             "type": "group",
             "children": {
               "color": {
@@ -389,7 +389,7 @@
             }
           },
           "splitLine": {
-            "name": "坐标轴在 grid 区域中的分隔线",
+            "name": "y轴分隔线",
             "type": "group",
             "children": {
               "show": {
@@ -400,15 +400,15 @@
             }
           },
           "axisLine": {
-            "name": "坐标轴轴线相关设置",
+            "name": "y轴设置",
             "type": "group",
             "children": {
               "lineStyle": {
-                "name": "坐标轴轴线相关设置",
+                "name": "y轴样式",
                 "type": "group",
                 "children": {
                   "color": {
-                    "name": "坐标轴线线的颜色",
+                    "name": "颜色",
                     "type": "color",
                     "default": "#eee"
                   }
@@ -419,7 +419,7 @@
         }
       },
       "visualMap": {
-        "name": "视觉映射组件",
+        "name": "联动映射",
         "type": "array",
         "default": [
           {
@@ -486,10 +486,10 @@
         ],
         "child": {
           "type": "object",
-          "name": "视觉映射<%= i+1 %>",
+          "name": "映射<%= i+1 %>",
           "child": {
             "left": {
-              "name": "组件离容器左侧的距离",
+              "name": "对齐方式",
               "type": "select",
               "options": [
                 {
@@ -508,73 +508,73 @@
               "default": "right"
             },
             "top": {
-              "name": "组件离容器上侧的距离",
+              "name": "上侧距离",
               "type": "text",
               "default": ""
             },
             "bottom": {
-              "name": "组件离容器下侧的距离",
+              "name": "下侧距离",
               "type": "text",
               "default": ""
             },
             "dimension": {
-              "name": "数据的维度",
+              "name": "数据维度",
               "type": "number",
               "default": 0
             },
             "min": {
-              "name": "组件的允许的最小值",
+              "name": "允许最小值",
               "type": "number",
               "default": 0
             },
             "max": {
-              "name": "组件的允许的最大值",
+              "name": "允许最大值",
               "type": "number",
               "default": 0
             },
             "itemWidth": {
-              "name": "图形的宽度",
+              "name": "宽度",
               "type": "number",
               "default": 0
             },
             "itemHeight": {
-              "name": "图形的高度",
+              "name": "高度",
               "type": "number",
               "default": 120
             },
             "calculable": {
-              "name": "是否显示拖拽用的手柄",
+              "name": "光标变化",
               "type": "boolean",
               "default": true
             },
             "precision": {
-              "name": "数据展示的小数精度",
+              "name": "小数位数",
               "type": "number",
               "default": 0
             },
             "text": {
-              "name": "两端的文本",
+              "name": "注释文本",
               "type": "text",
               "default": ""
             },
             "textGap": {
-              "name": "两端文字主体之间的距离",
+              "name": "文本距离",
               "type": "number",
               "default": 30
             },
             "textStyle": {
-              "name": "文字的样式",
+              "name": "文本样式",
               "type": "group",
               "children": {
                 "color": {
-                  "name": "文字的颜色",
+                  "name": "文本颜色",
                   "type": "color",
                   "default": ""
                 }
               }
             },
             "inRange": {
-              "name": "在选中范围中的视觉元素",
+              "name": "选中元素",
               "type": "group",
               "children": {
                 "symbolSize": {
@@ -590,7 +590,7 @@
               }
             },
             "outOfRange": {
-              "name": "在选中范围外的视觉元素",
+              "name": "未选中元素",
               "type": "group",
               "children": {
                 "symbolSize": {
@@ -606,11 +606,11 @@
               }
             },
             "controller": {
-              "name": "控制器",
+              "name": "关联控制器",
               "type": "group",
               "children": {
                 "inRange": {
-                  "name": "在选中范围中的视觉元素",
+                  "name": "未选中元素",
                   "type": "group",
                   "children": {
                     "color": {
@@ -621,7 +621,7 @@
                   }
                 },
                 "outOfRange": {
-                  "name": "在选中范围外的视觉元素",
+                  "name": "未选中元素",
                   "type": "group",
                   "children": {
                     "color": {
@@ -709,24 +709,24 @@
                   "type": "group",
                   "children": {
                     "opacity": {
-                      "name": "图形透明度",
+                      "name": "透明度",
                       "type": "number",
                       "default": 0.8,
                       "min": 0,
                       "max": 1
                     },
                     "shadowBlur": {
-                      "name": "图形阴影的模糊大小",
+                      "name": "阴影模糊大小",
                       "type": "number",
                       "default": 10
                     },
                     "shadowOffsetX": {
-                      "name": "阴影水平方向上的偏移距离",
+                      "name": "阴影水平偏移",
                       "type": "number",
                       "default": 0
                     },
                     "shadowOffsetY": {
-                      "name": "阴影垂直方向上的偏移距离",
+                      "name": "阴影垂直偏移",
                       "type": "number",
                       "default": 0
                     },
