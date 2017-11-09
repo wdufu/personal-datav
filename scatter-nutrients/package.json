@@ -1,0 +1,329 @@
+{
+  "name": "@dkbike/scatter-nutrients",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.8.0",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "可选轴线内容",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular_scatter"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "#2c343c"
+      },
+      "tooltip": {
+        "name": "提示框",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "padding": {
+            "name": "内边距",
+            "type": "number",
+            "default": 10
+          },
+          "backgroundColor": {
+            "name": "背景色",
+            "type": "color",
+            "default": "#222"
+          },
+          "borderColor": {
+            "name": "边框色",
+            "type": "color",
+            "default": "#777"
+          },
+          "borderWidth": {
+            "name": "边框宽度",
+            "type": "number",
+            "default": 1
+          }
+        }
+      },
+      "xAxis": {
+        "name": "x轴",
+        "type": "group",
+        "children": {
+          "name": {
+            "name": "x轴名称",
+            "type": "text",
+            "default": "protein"
+          },
+          "splitLine": {
+            "name": "x轴分隔线",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "是否显示分隔线",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "axisLine": {
+            "name": "x轴轴线",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          },
+          "axisLabel": {
+            "name": "x轴标签",
+            "type": "group",
+            "children": {
+              "textStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          },
+          "axisTick": {
+            "name": "x轴刻度",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "yAxis": {
+        "name": "y轴",
+        "type": "group",
+        "children": {
+          "name": {
+            "name": "y轴名称",
+            "type": "text",
+            "default": "calcium"
+          },
+          "splitLine": {
+            "name": "y轴分隔线",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "是否显示分隔线",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "axisLine": {
+            "name": "y轴轴线",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          },
+          "axisLabel": {
+            "name": "y轴标签",
+            "type": "group",
+            "children": {
+              "textStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          },
+          "axisTick": {
+            "name": "y轴刻度",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#fff"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "visualMap": {
+        "name": "联动映射",
+        "type": "array",
+        "default": [
+          {
+            "show": false,
+            "dimension": 2,
+            "textStyle": {
+              "color": "#fff"
+            }
+          },
+          {
+            "show": false,
+            "dimension": 3,
+            "textStyle": {
+              "color": "#fff"
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "映射<%= i+1 %>",
+          "child": {
+            "show": {
+              "name": "显示",
+              "type": "boolean",
+              "default": false
+            },
+            "dimension": {
+              "name": "数据维度",
+              "type": "number",
+              "default": 0
+            },
+            "textStyle": {
+              "name": "文本样式",
+              "type": "group",
+              "children": {
+                "color": {
+                  "name": "文本颜色",
+                  "type": "color",
+                  "default": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "zlevel": 1,
+            "name": "nutrients",
+            "type": "scatter",
+            "animationThreshold": 5000,
+            "progressiveThreshold": 5000
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "zlevel": {
+              "name": "zlevel值",
+              "type": "number",
+              "default": 1
+            },
+            "name": {
+              "name": "系列名称",
+              "type": "text",
+              "default": ""
+            },
+            "type": {
+              "name": "类型",
+              "type": "select",
+              "options": [
+                {
+                  "name": "scatter",
+                  "value": "scatter"
+                }
+              ],
+              "default": "scatter"
+            },
+            "animationThreshold": {
+              "name": "动画阈值",
+              "type": "number",
+              "default": 5000
+            },
+            "progressiveThreshold": {
+              "name": "渐进渲染阈值",
+              "type": "number",
+              "default": 5000
+            }
+          }
+        }
+      },
+      "animationEasingUpdate": {
+        "name": "缓动效果",
+        "type": "text",
+        "default": "cubicInOut"
+      },
+      "animationDurationUpdate": {
+        "name": "动画时长",
+        "type": "number",
+        "default": 2000
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
