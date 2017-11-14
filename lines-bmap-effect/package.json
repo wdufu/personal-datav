@@ -1,0 +1,433 @@
+{
+  "name": "@dkbike/lines-bmap-effect",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.7.2",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "动态轨迹图",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "map_effect"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "每个点代表一个坐标",
+        "fields": {
+          
+        }
+      }
+    },
+    "config": {
+      "bmap": {
+        "name": "地图配置",
+        "type": "group",
+        "children": {
+          "center": {
+            "name": "中心坐标",
+            "type": "text",
+            "default": "[116.46, 39.92]"
+          },
+          "zoom": {
+            "name": "缩放大小",
+            "type": "number",
+            "default": 10
+          },
+          "roam": {
+            "name": "是否拖拽",
+            "type": "boolean",
+            "default": true
+          },
+          "styleJson": {
+            "name": "地图样式",
+            "type": "array",
+            "default": [
+              {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": {
+                  "color": "#031628"
+                }
+              },
+              {
+                "featureType": "land",
+                "elementType": "geometry",
+                "stylers": {
+                  "color": "#000102"
+                }
+              },
+              {
+                "featureType": "highway",
+                "elementType": "all",
+                "stylers": {
+                  "visibility": "off"
+                }
+              },
+              {
+                "featureType": "arterial",
+                "elementType": "geometry.fill",
+                "stylers": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "featureType": "arterial",
+                "elementType": "geometry.stroke",
+                "stylers": {
+                  "color": "#0b3d51"
+                }
+              },
+              {
+                "featureType": "local",
+                "elementType": "geometry",
+                "stylers": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "featureType": "railway",
+                "elementType": "geometry.fill",
+                "stylers": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "featureType": "railway",
+                "elementType": "geometry.stroke",
+                "stylers": {
+                  "color": "#08304b"
+                }
+              },
+              {
+                "featureType": "subway",
+                "elementType": "geometry",
+                "stylers": {
+                  "lightness": -70
+                }
+              },
+              {
+                "featureType": "building",
+                "elementType": "geometry.fill",
+                "stylers": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.text.fill",
+                "stylers": {
+                  "color": "#857f7f"
+                }
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "featureType": "building",
+                "elementType": "geometry",
+                "stylers": {
+                  "color": "#022338"
+                }
+              },
+              {
+                "featureType": "green",
+                "elementType": "geometry",
+                "stylers": {
+                  "color": "#062032'"
+                }
+              },
+              {
+                "featureType": "boundary",
+                "elementType": "all",
+                "stylers": {
+                  "color": "#465b6c"
+                }
+              },
+              {
+                "featureType": "manmade",
+                "elementType": "all",
+                "stylers": {
+                  "color": "#022338"
+                }
+              },
+              {
+                "featureType": "label",
+                "elementType": "all",
+                "stylers": {
+                  "visibility": "off"
+                }
+              }
+            ],
+            "child": {
+              "type": "object",
+              "name": "样式<%= i+1 %>",
+              "child": {
+                "featureType": {
+                  "name": "功能类型",
+                  "type": "select",
+                  "options": [
+                    {
+                      "name": "water",
+                      "value": "water"
+                    },
+                    {
+                      "name": "land",
+                      "value": "land"
+                    },
+                    {
+                      "name": "highway",
+                      "value": "highway"
+                    },
+                    {
+                      "name": "arterial",
+                      "value": "arterial"
+                    },
+                    {
+                      "name": "local",
+                      "value": "local"
+                    },
+                    {
+                      "name": "railway",
+                      "value": "railway"
+                    },
+                    {
+                      "name": "subway",
+                      "value": "subway"
+                    },
+                    {
+                      "name": "building",
+                      "value": "building"
+                    },
+                    {
+                      "name": "green",
+                      "value": "green"
+                    },
+                    {
+                      "name": "boundary",
+                      "value": "boundary"
+                    },
+                    {
+                      "name": "manmade",
+                      "value": "manmade"
+                    },
+                    {
+                      "name": "label",
+                      "value": "label"
+                    }
+                  ],
+                  "default": "water"
+                },
+                "elementType": {
+                  "name": "元素类型",
+                  "type": "select",
+                  "options": [
+                    {
+                      "name": "all",
+                      "value": "all"
+                    },
+                    {
+                      "name": "geometry",
+                      "value": "geometry"
+                    },
+                    {
+                      "name": "geometry.fill",
+                      "value": "geometry.fill"
+                    },
+                    {
+                      "name": "geometry.stroke",
+                      "value": "geometry.stroke"
+                    },
+                    {
+                      "name": "labels.text.fill",
+                      "value": "labels.text.fill"
+                    },
+                    {
+                      "name": "labels.text.stroke",
+                      "value": "labels.text.stroke"
+                    }
+                  ],
+                  "default": "all"
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "type": "lines",
+            "coordinateSystem": "bmap",
+            "polyline": true,
+            "silent": true,
+            "lineStyle": {
+              "normal": {
+                "opacity": 0.2,
+                "width": 1
+              }
+            },
+            "progressiveThreshold": 500,
+            "progressive": 200,
+            "effect": {
+              "constantSpeed": 0,
+              "show": false,
+              "trailLength": 0.2,
+              "symbolSize": 3
+            },
+            "zlevel": 0
+          },
+          {
+            "type": "lines",
+            "coordinateSystem": "bmap",
+            "polyline": true,
+            "silent": true,
+            "lineStyle": {
+              "normal": {
+                "opacity": 0,
+                "width": 1
+              }
+            },
+            "effect": {
+              "constantSpeed": 20,
+              "show": true,
+              "trailLength": 0.1,
+              "symbolSize": 1.5
+            },
+            "progressiveThreshold": 0,
+            "progressive": 0,
+            "zlevel": 1
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "type": {
+              "name": "类型",
+              "type": "select",
+              "options": [
+                {
+                  "name": "lines",
+                  "value": "lines"
+                }
+              ],
+              "default": "lines"
+            },
+            "coordinateSystem": {
+              "name": "坐标系",
+              "type": "select",
+              "options": [
+                {
+                  "name": "bmap",
+                  "value": "bmap"
+                }
+              ],
+              "default": "bmap"
+            },
+            "polyline": {
+              "name": "是否多段线",
+              "type": "boolean",
+              "default": true
+            },
+            "silent": {
+              "name": "响应事件",
+              "type": "boolean",
+              "default": true
+            },
+            "lineStyle": {
+              "name": "线条样式",
+              "type": "group",
+              "children": {
+                "normal": {
+                  "name": "默认状态下的样式",
+                  "type": "group",
+                  "children": {
+                    "opacity": {
+                      "name": "透明度",
+                      "type": "number",
+                      "default": 0,
+                      "range": [
+                        0,
+                        1
+                      ]
+                    },
+                    "width": {
+                      "name": "宽度",
+                      "type": "number",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
+            "progressiveThreshold": {
+              "name": "渐进渲染阈值",
+              "type": "number",
+              "default": 0
+            },
+            "progressive": {
+              "name": "渐进渲染",
+              "type": "number",
+              "default": 0
+            },
+            "effect": {
+              "name": "配置线特效",
+              "type": "group",
+              "children": {
+                "constantSpeed": {
+                  "name": "动画移速",
+                  "type": "number",
+                  "default": 0
+                },
+                "show": {
+                  "name": "显示",
+                  "type": "boolean",
+                  "default": false
+                },
+                "trailLength": {
+                  "name": "尾迹长度",
+                  "type": "number",
+                  "default": 0.2,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                "symbolSize": {
+                  "name": "标记大小",
+                  "type": "number",
+                  "default": 3
+                }
+              }
+            },
+            "zlevel": {
+              "name": "图形zlevel值",
+              "type": "number",
+              "default": 0
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
