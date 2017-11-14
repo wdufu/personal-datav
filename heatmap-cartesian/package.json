@@ -1,0 +1,474 @@
+{
+  "name": "@dkbike/heatmap-cartesian",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.8.5",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "热力图",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular_heatmap"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "笛卡尔坐标系上的热力图",
+        "fields": {
+          "value": {
+            "x": {
+              "description": "x轴"
+            },
+            "y": {
+              "description": "y轴"
+            },
+            "s": {
+              "description": "值"
+            }
+          }
+        }
+      }
+    },
+    "config": {
+      "tooltip": {
+        "name": "提示框",
+        "type": "group",
+        "children": {
+          "top": {
+            "name": "对齐方式",
+            "type": "select",
+            "options": [
+              {
+                "name": "顶部对齐",
+                "value": "top"
+              },
+              {
+                "name": "居中对齐",
+                "value": "middle"
+              },
+              {
+                "name": "底部对齐",
+                "value": "bottom"
+              }
+            ],
+            "default": "top"
+          }
+        }
+      },
+      "animation": {
+        "name": "开启动画",
+        "type": "boolean",
+        "default": true
+      },
+      "grid": {
+        "name": "图标位置",
+        "type": "group",
+        "children": {
+          "height": {
+            "name": "高度",
+            "type": "text",
+            "default": "50%"
+          },
+          "top": {
+            "name": "上侧",
+            "type": "text",
+            "default": "10%"
+          }
+        }
+      },
+      "xAxis": {
+        "name": "x轴",
+        "type": "group",
+        "children": {
+          "type": {
+            "name": "x轴类型",
+            "type": "select",
+            "options": [
+              {
+                "name": "数值轴",
+                "value": "value"
+              },
+              {
+                "name": "类目轴",
+                "value": "category"
+              },
+              {
+                "name": "时间轴",
+                "value": "time"
+              },
+              {
+                "name": "对数轴",
+                "value": "log"
+              }
+            ],
+            "default": "category"
+          },
+          "data": {
+            "name": "类目数据",
+            "type": "array",
+            "default": [
+              {
+                "name": "名称",
+                "value": "12a"
+              },
+              {
+                "name": "名称",
+                "value": "1a"
+              },
+              {
+                "name": "名称",
+                "value": "2a"
+              },
+              {
+                "name": "名称",
+                "value": "3a"
+              },
+              {
+                "name": "名称",
+                "value": "4a"
+              },
+              {
+                "name": "名称",
+                "value": "5a"
+              },
+              {
+                "name": "名称",
+                "value": "6a"
+              },
+              {
+                "name": "名称",
+                "value": "7a"
+              },
+              {
+                "name": "名称",
+                "value": "8a"
+              },
+              {
+                "name": "名称",
+                "value": "9a"
+              },
+              {
+                "name": "名称",
+                "value": "10a"
+              },
+              {
+                "name": "名称",
+                "value": "11a"
+              },
+              {
+                "name": "名称",
+                "value": "12p"
+              },
+              {
+                "name": "名称",
+                "value": "1p"
+              },
+              {
+                "name": "名称",
+                "value": "2p"
+              },
+              {
+                "name": "名称",
+                "value": "3p"
+              },
+              {
+                "name": "名称",
+                "value": "4p"
+              },
+              {
+                "name": "名称",
+                "value": "5p"
+              },
+              {
+                "name": "名称",
+                "value": "6p"
+              },
+              {
+                "name": "名称",
+                "value": "7p"
+              },
+              {
+                "name": "名称",
+                "value": "8p"
+              },
+              {
+                "name": "名称",
+                "value": "9p"
+              },
+              {
+                "name": "名称",
+                "value": "10p"
+              },
+              {
+                "name": "名称",
+                "value": "11p"
+              }
+            ],
+            "child": {
+              "type": "object",
+              "name": "类目<%= i+1 %>",
+              "child": {
+                "value": {
+                  "name": "类目值",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            }
+          },
+          "splitArea": {
+            "name": "分隔区域",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "显示区域",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        }
+      },
+      "yAxis": {
+        "name": "y轴",
+        "type": "group",
+        "children": {
+          "type": {
+            "name": "y轴类型",
+            "type": "select",
+            "options": [
+              {
+                "name": "数值轴",
+                "value": "value"
+              },
+              {
+                "name": "类目轴",
+                "value": "category"
+              },
+              {
+                "name": "时间轴",
+                "value": "time"
+              },
+              {
+                "name": "对数轴",
+                "value": "log"
+              }
+            ],
+            "default": "category"
+          },
+          "data": {
+            "name": "类目数据",
+            "type": "array",
+            "default": [
+              {
+                "name": "名称",
+                "value": "Saturday"
+              },
+              {
+                "name": "名称",
+                "value": "Friday"
+              },
+              {
+                "name": "名称",
+                "value": "Thursday"
+              },
+              {
+                "name": "名称",
+                "value": "Wednesday"
+              },
+              {
+                "name": "名称",
+                "value": "Tuesday"
+              },
+              {
+                "name": "名称",
+                "value": "Monday"
+              },
+              {
+                "name": "名称",
+                "value": "Sunday"
+              }
+            ],
+            "child": {
+              "type": "object",
+              "name": "类目<%= i+1 %>",
+              "child": {
+                "value": {
+                  "name": "类目值",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            }
+          },
+          "splitArea": {
+            "name": "分隔区域",
+            "type": "group",
+            "children": {
+              "show": {
+                "name": "显示区域",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        }
+      },
+      "visualMap": {
+        "name": "联动映射",
+        "type": "group",
+        "children": {
+          "min": {
+            "name": "最小值",
+            "type": "number",
+            "default": 0
+          },
+          "max": {
+            "name": "最大值",
+            "type": "number",
+            "default": 10
+          },
+          "calculable": {
+            "name": "显示手柄",
+            "type": "boolean",
+            "default": true
+          },
+          "orient": {
+            "name": "组件方向",
+            "type": "select",
+            "options": [
+              {
+                "name": "水平",
+                "value": "horizontal"
+              },
+              {
+                "name": "竖直",
+                "value": "vertical"
+              }
+            ],
+            "default": "horizontal"
+          },
+          "left": {
+            "name": "左侧对齐方式",
+            "type": "select",
+            "options": [
+              {
+                "name": "左对齐",
+                "value": "left"
+              },
+              {
+                "name": "居中对齐",
+                "value": "center"
+              },
+              {
+                "name": "右对齐",
+                "value": "right"
+              }
+            ],
+            "default": "center"
+          },
+          "bottom": {
+            "name": "底部距离",
+            "type": "text",
+            "default": "15%"
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "name": "Punch Card",
+            "type": "heatmap",
+            "label": {
+              "normal": {
+                "show": true
+              }
+            },
+            "itemStyle": {
+              "emphasis": {
+                "shadowBlur": 10,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "name": {
+              "name": "系列名称",
+              "type": "text",
+              "default": ""
+            },
+            "type": {
+              "name": "类型",
+              "type": "select",
+              "options": [
+                {
+                  "name": "heatmap",
+                  "value": "heatmap"
+                }
+              ],
+              "default": "heatmap"
+            },
+            "label": {
+              "name": "文本标签",
+              "type": "group",
+              "children": {
+                "normal": {
+                  "name": "默认状态下的样式",
+                  "type": "group",
+                  "children": {
+                    "show": {
+                      "name": "显示",
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              }
+            },
+            "itemStyle": {
+              "name": "图形样式",
+              "type": "group",
+              "children": {
+                "emphasis": {
+                  "name": "高亮状态下的样式",
+                  "type": "group",
+                  "children": {
+                    "shadowBlur": {
+                      "name": "阴影模糊大小",
+                      "type": "number",
+                      "default": 10
+                    },
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "rgba(0, 0, 0, 0.5)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
