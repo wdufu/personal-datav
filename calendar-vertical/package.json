@@ -1,0 +1,279 @@
+{
+  "name": "@dkbike/calendar-vertical",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.8.5",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "垂直日历",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "calender_map"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "日期与数值",
+        "fields": {
+          "x": {
+            "description": "日期"
+          },
+          "y": {
+            "description": "数值"
+          },
+          "s": {
+            "description": "系列值"
+          }
+        }
+      }
+    },
+    "config": {
+      "tooltip": {
+        "name": "提示框",
+        "type": "group",
+        "children": {
+          "position": {
+            "name": "位置",
+            "type": "select",
+            "options": [
+              {
+                "name": "内部中心",
+                "value": "inside"
+              },
+              {
+                "name": "上侧",
+                "value": "top"
+              },
+              {
+                "name": "左侧",
+                "value": "left"
+              },
+              {
+                "name": "右侧",
+                "value": "right"
+              },
+              {
+                "name": "下侧",
+                "value": "bottom"
+              }
+            ],
+            "default": "top"
+          }
+        }
+      },
+      "visualMap": {
+        "name": "联动映射",
+        "type": "group",
+        "children": {
+          "min": {
+            "name": "允许最小值",
+            "type": "number",
+            "default": 0
+          },
+          "max": {
+            "name": "允许最大值",
+            "type": "number",
+            "default": 1000
+          },
+          "calculable": {
+            "name": "光标变化",
+            "type": "boolean",
+            "default": true
+          },
+          "orient": {
+            "name": "组件方向",
+            "type": "select",
+            "options": [
+              {
+                "name": "水平",
+                "value": "horizontal"
+              },
+              {
+                "name": "竖直",
+                "value": "vertical"
+              }
+            ],
+            "default": "vertical"
+          },
+          "left": {
+            "name": "上侧距离",
+            "type": "text",
+            "default": "670"
+          },
+          "top": {
+            "name": "对齐方式",
+            "type": "select",
+            "options": [
+              {
+                "name": "顶部对齐",
+                "value": "top"
+              },
+              {
+                "name": "居中对齐",
+                "value": "middle"
+              },
+              {
+                "name": "底部对齐",
+                "value": "bottom"
+              }
+            ],
+            "default": "middle"
+          }
+        }
+      },
+      "calendar": {
+        "name": "日历",
+        "type": "array",
+        "default": [
+          {
+            "left": 80,
+            "cellSize": {
+              "width": "20",
+              "height": "20"
+            },
+            "bottom": "auto",
+            "orient": "vertical",
+            "range": "2015",
+            "dayLabel": {
+              "margin": 0
+            }
+          },
+          {
+            "left": 300,
+            "cellSize": {
+              "width": "20",
+              "height": "20"
+            },
+            "bottom": "auto",
+            "orient": "vertical",
+            "range": "2016",
+            "dayLabel": {
+              "margin": 0
+            }
+          },
+          {
+            "left": 520,
+            "cellSize": {
+              "width": "20",
+              "height": "auto"
+            },
+            "bottom": "10",
+            "orient": "vertical",
+            "range": "2017",
+            "dayLabel": {
+              "margin": 5
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "left": {
+              "name": "左侧距离",
+              "type": "number",
+              "default": 0
+            },
+            "cellSize": {
+              "name": "格框大小",
+              "type": "group",
+              "children": {
+                "width": {
+                  "name": "宽度",
+                  "type": "text",
+                  "default": ""
+                },
+                "height": {
+                  "name": "高度",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            },
+            "bottom": {
+              "name": "底部距离",
+              "type": "text",
+              "default": ""
+            },
+            "orient": {
+              "name": "布局方向",
+              "type": "select",
+              "options": [
+                {
+                  "name": "水平",
+                  "value": "horizontal"
+                },
+                {
+                  "name": "竖直",
+                  "value": "vertical"
+                }
+              ],
+              "default": "vertical"
+            },
+            "range": {
+              "name": "底部距离",
+              "type": "text",
+              "default": ""
+            },
+            "dayLabel": {
+              "name": "星期轴样式",
+              "type": "group",
+              "children": {
+                "margin": {
+                  "name": "距轴线距离",
+                  "type": "number",
+                  "default": 0
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "系列",
+        "type": "array",
+        "default": [
+          {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 0
+          },
+          {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 1
+          },
+          {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "calendarIndex": 2
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "系列<%= i+1 %>",
+          "child": {
+            "calendarIndex": {
+              "name": "坐标序号",
+              "type": "number",
+              "default": 0
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": "./data.json"
+    }
+  }
+}
