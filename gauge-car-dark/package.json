@@ -1,0 +1,981 @@
+{
+  "name": "@dkbike/gauge-car-dark",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^3.8.5",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "汽车仪表盘",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular_gauge"
+    ],
+    "view": {
+      "width": "800",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "#1b1b1b"
+      },
+      "tooltip": {
+        "name": "提示框",
+        "type": "group",
+        "children": {
+          "formatter": {
+            "name": "内容格式",
+            "type": "text",
+            "default": "{a} <br/>{c} {b}"
+          }
+        }
+      },
+      "toolbox": {
+        "name": "工具栏",
+        "type": "group",
+        "children": {
+          "show": {
+            "name": "显示",
+            "type": "boolean",
+            "default": true
+          },
+          "feature": {
+            "name": "工具配置",
+            "type": "group",
+            "children": {
+              "restore": {
+                "name": "还原配置",
+                "type": "group",
+                "children": {
+                  "show": {
+                    "name": "显示",
+                    "type": "boolean",
+                    "default": true
+                  }
+                }
+              },
+              "saveAsImage": {
+                "name": "保存图片",
+                "type": "group",
+                "children": {
+                  "show": {
+                    "name": "显示",
+                    "type": "boolean",
+                    "default": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "series": {
+        "name": "仪表盘",
+        "type": "array",
+        "default": [
+          {
+            "name": "速度",
+            "type": "gauge",
+            "center": {
+              "x": "50%",
+              "y": "50%"
+            },
+            "radius": "50%",
+            "min": 0,
+            "max": 220,
+            "startAngle": 225,
+            "endAngle": -45,
+            "splitNumber": 11,
+            "axisLine": {
+              "lineStyle": {
+                "color": {
+                  "color1": {
+                    "distance": 0.09,
+                    "color": "#00ff00"
+                  },
+                  "color2": {
+                    "distance": 0.82,
+                    "color": "#1e90ff"
+                  },
+                  "color3": {
+                    "distance": 1,
+                    "color": "#ff4500"
+                  }
+                },
+                "width": 3,
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisLabel": {
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisTick": {
+              "show": true,
+              "length": 15,
+              "lineStyle": {
+                "color": "auto",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "splitLine": {
+              "length": 25,
+              "lineStyle": {
+                "width": 3,
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "pointer": {
+              "width": 8,
+              "shadowColor": "#fff",
+              "shadowBlur": 5
+            },
+            "title": {
+              "show": true,
+              "offsetCenter": {
+                "x": 0,
+                "y": "-40%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "fontSize": 20,
+                "fontStyle": "italic",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "detail": {
+              "show": true,
+              "backgroundColor": "rgba(30,144,255,0.8)",
+              "borderWidth": 1,
+              "borderColor": "#fff",
+              "shadowColor": "#fff",
+              "shadowBlur": 5,
+              "offsetCenter": {
+                "x": 0,
+                "y": "50%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff"
+              }
+            },
+            "data": {
+              "value": 40,
+              "name": "km/h"
+            }
+          },
+          {
+            "name": "转速",
+            "type": "gauge",
+            "center": {
+              "x": "25%",
+              "y": "55%"
+            },
+            "radius": "30%",
+            "min": 0,
+            "max": 7,
+            "startAngle": 225,
+            "endAngle": 45,
+            "splitNumber": 7,
+            "axisLine": {
+              "lineStyle": {
+                "color": {
+                  "color1": {
+                    "distance": 0.29,
+                    "color": "#00ff00"
+                  },
+                  "color2": {
+                    "distance": 0.86,
+                    "color": "#1e90ff"
+                  },
+                  "color3": {
+                    "distance": 1,
+                    "color": "#ff4500"
+                  }
+                },
+                "width": 2,
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisLabel": {
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisTick": {
+              "show": true,
+              "length": 12,
+              "lineStyle": {
+                "color": "auto",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "splitLine": {
+              "length": 20,
+              "lineStyle": {
+                "width": 3,
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "pointer": {
+              "width": 5,
+              "shadowColor": "#fff",
+              "shadowBlur": 5
+            },
+            "title": {
+              "show": true,
+              "offsetCenter": {
+                "x": 0,
+                "y": "-30%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "fontSize": 15,
+                "fontStyle": "italic",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "detail": {
+              "show": true,
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+              "borderColor": "#fff",
+              "shadowColor": "#fff",
+              "shadowBlur": 5,
+              "offsetCenter": {
+                "x": 25,
+                "y": "20%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff"
+              }
+            },
+            "data": {
+              "value": 1.5,
+              "name": "x1000 r/min"
+            }
+          },
+          {
+            "name": "油表",
+            "type": "gauge",
+            "center": {
+              "x": "75%",
+              "y": "50%"
+            },
+            "radius": "30%",
+            "min": 0,
+            "max": 2,
+            "startAngle": 135,
+            "endAngle": 45,
+            "splitNumber": 2,
+            "axisLine": {
+              "lineStyle": {
+                "color": {
+                  "color1": {
+                    "distance": 0.2,
+                    "color": "#00ff00"
+                  },
+                  "color2": {
+                    "distance": 0.8,
+                    "color": "#1e90ff"
+                  },
+                  "color3": {
+                    "distance": 1,
+                    "color": "#ff4500"
+                  }
+                },
+                "width": 2,
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisLabel": {
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisTick": {
+              "show": true,
+              "length": 12,
+              "lineStyle": {
+                "color": "auto",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "splitLine": {
+              "length": 15,
+              "lineStyle": {
+                "width": 3,
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "pointer": {
+              "width": 2,
+              "shadowColor": "#fff",
+              "shadowBlur": 5
+            },
+            "title": {
+              "show": false,
+              "offsetCenter": {
+                "x": 0,
+                "y": "-40%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "fontSize": 20,
+                "fontStyle": "italic",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "detail": {
+              "show": false,
+              "backgroundColor": "transparent",
+              "borderWidth": 1,
+              "borderColor": "#fff",
+              "shadowColor": "#fff",
+              "shadowBlur": 5,
+              "offsetCenter": {
+                "x": 0,
+                "y": "50%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff"
+              }
+            },
+            "data": {
+              "value": 0.5,
+              "name": "gas"
+            }
+          },
+          {
+            "name": "水表",
+            "type": "gauge",
+            "center": {
+              "x": "75%",
+              "y": "50%"
+            },
+            "radius": "30%",
+            "min": 0,
+            "max": 2,
+            "startAngle": 315,
+            "endAngle": 225,
+            "splitNumber": 2,
+            "axisLine": {
+              "lineStyle": {
+                "color": {
+                  "color1": {
+                    "distance": 0.2,
+                    "color": "#00ff00"
+                  },
+                  "color2": {
+                    "distance": 0.8,
+                    "color": "#1e90ff"
+                  },
+                  "color3": {
+                    "distance": 1,
+                    "color": "#ff4500"
+                  }
+                },
+                "width": 2,
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisLabel": {
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "axisTick": {
+              "show": false,
+              "length": 12,
+              "lineStyle": {
+                "color": "auto",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "splitLine": {
+              "length": 15,
+              "lineStyle": {
+                "width": 3,
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "pointer": {
+              "width": 2,
+              "shadowColor": "#fff",
+              "shadowBlur": 5
+            },
+            "title": {
+              "show": false,
+              "offsetCenter": {
+                "x": 0,
+                "y": "-40%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "fontSize": 20,
+                "fontStyle": "italic",
+                "color": "#fff",
+                "shadowColor": "#fff",
+                "shadowBlur": 10
+              }
+            },
+            "detail": {
+              "show": false,
+              "backgroundColor": "transparent",
+              "borderWidth": 1,
+              "borderColor": "#fff",
+              "shadowColor": "#fff",
+              "shadowBlur": 5,
+              "offsetCenter": {
+                "x": 0,
+                "y": "50%"
+              },
+              "textStyle": {
+                "fontWeight": "bolder",
+                "color": "#fff"
+              }
+            },
+            "data": {
+              "value": 0.5,
+              "name": "gas"
+            }
+          }
+        ],
+        "child": {
+          "type": "object",
+          "name": "仪表盘<%= i+1 %>",
+          "child": {
+            "name": {
+              "name": "名称",
+              "type": "text",
+              "default": ""
+            },
+            "center": {
+              "name": "位置",
+              "type": "group",
+              "children": {
+                "x": {
+                  "name": "偏离x轴",
+                  "type": "text",
+                  "default": ""
+                },
+                "y": {
+                  "name": "偏离y轴",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            },
+            "radius": {
+              "name": "半径",
+              "type": "text",
+              "default": ""
+            },
+            "min": {
+              "name": "最小值",
+              "type": "number",
+              "default": 0
+            },
+            "max": {
+              "name": "最大值",
+              "type": "number",
+              "default": 0
+            },
+            "startAngle": {
+              "name": "起始角度",
+              "type": "number",
+              "default": 0
+            },
+            "endAngle": {
+              "name": "结束角度",
+              "type": "number",
+              "default": 0
+            },
+            "splitNumber": {
+              "name": "刻度段数",
+              "type": "number",
+              "default": 0
+            },
+            "axisLine": {
+              "name": "轴线配置",
+              "type": "group",
+              "children": {
+                "lineStyle": {
+                  "name": "样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "颜色分段",
+                      "type": "group",
+                      "children": {
+                        "color1": {
+                          "name": "分段1",
+                          "type": "group",
+                          "children": {
+                            "distance": {
+                              "name": "结束位置",
+                              "type": "number",
+                              "default": 0,
+                              "range": [
+                                0,
+                                1
+                              ]
+                            },
+                            "color": {
+                              "name": "颜色",
+                              "type": "color",
+                              "default": ""
+                            }
+                          }
+                        },
+                        "color2": {
+                          "name": "分段2",
+                          "type": "group",
+                          "children": {
+                            "distance": {
+                              "name": "结束位置",
+                              "type": "number",
+                              "default": 0,
+                              "range": [
+                                0,
+                                1
+                              ]
+                            },
+                            "color": {
+                              "name": "颜色",
+                              "type": "color",
+                              "default": ""
+                            }
+                          }
+                        },
+                        "color3": {
+                          "name": "分段3",
+                          "type": "group",
+                          "children": {
+                            "distance": {
+                              "name": "结束位置",
+                              "type": "number",
+                              "default": 0,
+                              "range": [
+                                0,
+                                1
+                              ]
+                            },
+                            "color": {
+                              "name": "颜色",
+                              "type": "color",
+                              "default": ""
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "axisLabel": {
+              "name": "刻度标签",
+              "type": "group",
+              "children": {
+                "textStyle": {
+                  "name": "文本样式",
+                  "type": "group",
+                  "children": {
+                    "fontWeight": {
+                      "name": "字体粗细",
+                      "type": "select",
+                      "options": [
+                        {
+                          "name": "normal",
+                          "value": "normal"
+                        },
+                        {
+                          "name": "bold",
+                          "value": "bold"
+                        },
+                        {
+                          "name": "bolder",
+                          "value": "bolder"
+                        },
+                        {
+                          "name": "lighter",
+                          "value": "lighter"
+                        }
+                      ],
+                      "default": "bolder"
+                    },
+                    "color": {
+                      "name": "文字颜色",
+                      "type": "color",
+                      "default": "#fff"
+                    },
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "transparent"
+                    },
+                    "shadowBlur": {
+                      "name": "阴影长度",
+                      "type": "number",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
+            "axisTick": {
+              "name": "刻度样式",
+              "type": "group",
+              "children": {
+                "show": {
+                  "name": "显示",
+                  "type": "boolean",
+                  "default": true
+                },
+                "length": {
+                  "name": "线长",
+                  "type": "number",
+                  "default": 8
+                },
+                "lineStyle": {
+                  "name": "文本样式",
+                  "type": "group",
+                  "children": {
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "transparent"
+                    },
+                    "shadowBlur": {
+                      "name": "阴影长度",
+                      "type": "number",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
+            "splitLine": {
+              "name": "分隔线",
+              "type": "group",
+              "children": {
+                "length": {
+                  "name": "线长",
+                  "type": "number",
+                  "default": 8
+                },
+                "lineStyle": {
+                  "name": "样式",
+                  "type": "group",
+                  "children": {
+                    "width": {
+                      "name": "线宽",
+                      "type": "number",
+                      "default": 2
+                    },
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#eee"
+                    },
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "transparent"
+                    },
+                    "shadowBlur": {
+                      "name": "阴影长度",
+                      "type": "number",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
+            "pointer": {
+              "name": "指针",
+              "type": "group",
+              "children": {
+                "width": {
+                  "name": "宽度",
+                  "type": "number",
+                  "default": 8
+                },
+                "shadowColor": {
+                  "name": "阴影颜色",
+                  "type": "color",
+                  "default": "transparent"
+                },
+                "shadowBlur": {
+                  "name": "阴影长度",
+                  "type": "number",
+                  "default": 0
+                }
+              }
+            },
+            "title": {
+              "name": "标题",
+              "type": "group",
+              "children": {
+                "show": {
+                  "name": "显示",
+                  "type": "boolean",
+                  "default": true
+                },
+                "offsetCenter": {
+                  "name": "偏移位置",
+                  "type": "group",
+                  "children": {
+                    "x": {
+                      "name": "水平偏移",
+                      "type": "number",
+                      "default": 0
+                    },
+                    "y": {
+                      "name": "垂直偏移",
+                      "type": "text",
+                      "default": "-40%"
+                    }
+                  }
+                },
+                "textStyle": {
+                  "name": "文本样式",
+                  "type": "group",
+                  "children": {
+                    "fontWeight": {
+                      "name": "字体粗细",
+                      "type": "select",
+                      "options": [
+                        {
+                          "name": "normal",
+                          "value": "normal"
+                        },
+                        {
+                          "name": "bold",
+                          "value": "bold"
+                        },
+                        {
+                          "name": "bolder",
+                          "value": "bolder"
+                        },
+                        {
+                          "name": "lighter",
+                          "value": "lighter"
+                        }
+                      ],
+                      "default": "bolder"
+                    },
+                    "fontSize": {
+                      "name": "字号",
+                      "type": "number",
+                      "default": 15
+                    },
+                    "fontStyle": {
+                      "name": "字体风格",
+                      "type": "select",
+                      "options": [
+                        {
+                          "name": "normal",
+                          "value": "normal"
+                        },
+                        {
+                          "name": "italic",
+                          "value": "italic"
+                        },
+                        {
+                          "name": "oblique",
+                          "value": "oblique"
+                        }
+                      ],
+                      "default": "italic"
+                    },
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#eee"
+                    },
+                    "shadowColor": {
+                      "name": "阴影颜色",
+                      "type": "color",
+                      "default": "transparent"
+                    },
+                    "shadowBlur": {
+                      "name": "阴影长度",
+                      "type": "number",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
+            "detail": {
+              "name": "详情",
+              "type": "group",
+              "children": {
+                "show": {
+                  "name": "显示",
+                  "type": "boolean",
+                  "default": true
+                },
+                "backgroundColor": {
+                  "name": "文字背景色",
+                  "type": "color",
+                  "default": "transparent"
+                },
+                "borderWidth": {
+                  "name": "文字边宽",
+                  "type": "number",
+                  "default": 0
+                },
+                "borderColor": {
+                  "name": "文字边色",
+                  "type": "color",
+                  "default": "transparent"
+                },
+                "shadowColor": {
+                  "name": "文字阴影色",
+                  "type": "color",
+                  "default": "transparent"
+                },
+                "shadowBlur": {
+                  "name": "文字阴影长",
+                  "type": "number",
+                  "default": 0
+                },
+                "offsetCenter": {
+                  "name": "偏移位置",
+                  "type": "group",
+                  "children": {
+                    "x": {
+                      "name": "水平偏移",
+                      "type": "number",
+                      "default": 0
+                    },
+                    "y": {
+                      "name": "垂直偏移",
+                      "type": "text",
+                      "default": "40%"
+                    }
+                  }
+                },
+                "textStyle": {
+                  "name": "文本样式",
+                  "type": "group",
+                  "children": {
+                    "fontWeight": {
+                      "name": "字体粗细",
+                      "type": "select",
+                      "options": [
+                        {
+                          "name": "normal",
+                          "value": "normal"
+                        },
+                        {
+                          "name": "bold",
+                          "value": "bold"
+                        },
+                        {
+                          "name": "bolder",
+                          "value": "bolder"
+                        },
+                        {
+                          "name": "lighter",
+                          "value": "lighter"
+                        }
+                      ],
+                      "default": "bolder"
+                    },
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#eee"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "数据",
+              "type": "group",
+              "children": {
+                "name": {
+                  "name": "名称",
+                  "type": "text",
+                  "default": ""
+                },
+                "value": {
+                  "name": "值",
+                  "type": "text",
+                  "default": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}
