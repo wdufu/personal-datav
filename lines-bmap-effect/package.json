@@ -319,35 +319,8 @@
           "type": "object",
           "name": "系列<%= i+1 %>",
           "child": {
-            "type": {
-              "name": "类型",
-              "type": "select",
-              "options": [
-                {
-                  "name": "lines",
-                  "value": "lines"
-                }
-              ],
-              "default": "lines"
-            },
-            "coordinateSystem": {
-              "name": "坐标系",
-              "type": "select",
-              "options": [
-                {
-                  "name": "bmap",
-                  "value": "bmap"
-                }
-              ],
-              "default": "bmap"
-            },
             "polyline": {
               "name": "是否多段线",
-              "type": "boolean",
-              "default": true
-            },
-            "silent": {
-              "name": "响应事件",
               "type": "boolean",
               "default": true
             },
