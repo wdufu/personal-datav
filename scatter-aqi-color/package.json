@@ -225,6 +225,17 @@
             "name": "边框宽度",
             "type": "number",
             "default": 1
+          },
+          "textStyle": {
+            "name": "文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              }
+            }
           }
         }
       },
