@@ -90,6 +90,27 @@
             "type": "boolean",
             "default": true
           },
+          "inRange": {
+            "name": "图元颜色混合",
+            "type": "group",
+            "children": {
+              "color1": {
+                "name": "颜色1",
+                "type": "color",
+                "default": "#121122"
+              },
+              "color2": {
+                "name": "颜色2",
+                "type": "color",
+                "default": "rgba(3,4,5,0.4)"
+              },
+              "color3": {
+                "name": "颜色3",
+                "type": "color",
+                "default": "red"
+              }
+            }
+          },
           "orient": {
             "name": "组件方向",
             "type": "select",

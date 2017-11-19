@@ -47,6 +47,8 @@ module.exports = Event.extend(function Base(container, config) {
       var format = Chart.format.formatTime('yyyy-MM-dd', p.data[0]);
       return format + ': ' + p.data[1];
     }
+    
+    cfg.visualMap.inRange.color = [cfg.visualMap.inRange.color1, cfg.visualMap.inRange.color2, cfg.visualMap.inRange.color3]; 
 
     cfg.series.forEach(function (element, index) {
       element.data = data[index].map(function (item) {
