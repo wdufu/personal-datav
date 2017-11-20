@@ -202,7 +202,21 @@
             "orient": "vertical",
             "range": "2015",
             "dayLabel": {
+              "color": "#000",
               "margin": 0
+            },
+            "monthLabel": {
+              "color": "#000",
+              "margin": 5
+            },
+            "yearLabel": {
+              "color": "#fff",
+              "margin": 20
+            },
+            "splitLine": {
+              "lineStyle": {
+                  "color": "#000"
+              }
             }
           },
           {
@@ -215,7 +229,21 @@
             "orient": "vertical",
             "range": "2016",
             "dayLabel": {
+              "color": "#000",
               "margin": 0
+            },
+            "monthLabel": {
+              "color": "#000",
+              "margin": 5
+            },
+            "yearLabel": {
+              "color": "#fff",
+              "margin": 20
+            },
+            "splitLine": {
+              "lineStyle": {
+                  "color": "#000"
+              }
             }
           },
           {
@@ -228,7 +256,21 @@
             "orient": "vertical",
             "range": "2017",
             "dayLabel": {
+              "color": "#000",
+              "margin": 0
+            },
+            "monthLabel": {
+              "color": "#000",
               "margin": 5
+            },
+            "yearLabel": {
+              "color": "#fff",
+              "margin": 20
+            },
+            "splitLine": {
+              "lineStyle": {
+                  "color": "#000"
+              }
             }
           }
         ],
@@ -286,10 +328,64 @@
               "name": "星期轴样式",
               "type": "group",
               "children": {
+                "color": {
+                  "name": "颜色",
+                  "type": "color",
+                  "default": "#000"
+                },
                 "margin": {
                   "name": "距轴线距离",
                   "type": "number",
                   "default": 0
+                }
+              }
+            },
+            "monthLabel": {
+              "name": "月份轴样式",
+              "type": "group",
+              "children": {
+                "color": {
+                  "name": "颜色",
+                  "type": "color",
+                  "default": "#000"
+                },
+                "margin": {
+                  "name": "距轴线距离",
+                  "type": "number",
+                  "default": 5
+                }
+              }
+            },
+            "yearLabel": {
+              "name": "年份轴样式",
+              "type": "group",
+              "children": {
+                "color": {
+                  "name": "颜色",
+                  "type": "color",
+                  "default": "#fff"
+                },
+                "margin": {
+                  "name": "距轴线距离",
+                  "type": "number",
+                  "default": 20
+                }
+              }
+            },
+            "splitLine": {
+              "name": "分隔线",
+              "type": "group",
+              "children": {
+                "lineStyle": {
+                  "name": "样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#000"
+                    }
+                  }
                 }
               }
             }
