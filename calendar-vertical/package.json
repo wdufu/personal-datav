@@ -194,7 +194,7 @@
         "default": [
           {
             "left": 80,
-            "cellSize": {
+            "cellSize1": {
               "width": "20",
               "height": "20"
             },
@@ -221,7 +221,7 @@
           },
           {
             "left": 300,
-            "cellSize": {
+            "cellSize1": {
               "width": "20",
               "height": "20"
             },
@@ -248,7 +248,7 @@
           },
           {
             "left": 520,
-            "cellSize": {
+            "cellSize1": {
               "width": "20",
               "height": "auto"
             },
@@ -283,7 +283,7 @@
               "type": "number",
               "default": 0
             },
-            "cellSize": {
+            "cellSize1": {
               "name": "格框大小",
               "type": "group",
               "children": {

@@ -40,7 +40,7 @@ module.exports = Event.extend(function Base(container, config) {
     data = this.data(data);
     var cfg = this.mergeConfig(config);
     cfg.calendar.forEach(function (element) {
-      element.cellSize = [element.cellSize.width, element.cellSize.height];
+      element.cellSize = [element.cellSize1.width, element.cellSize1.height];
     });
 
     cfg.tooltip.formatter =  function (p) {
