@@ -287,17 +287,6 @@
               "type": "text",
               "default": ""
             },
-            "type": {
-              "name": "类型",
-              "type": "select",
-              "options": [
-                {
-                  "name": "scatter",
-                  "value": "scatter"
-                }
-              ],
-              "default": "scatter"
-            },
             "animationThreshold": {
               "name": "动画阈值",
               "type": "number",

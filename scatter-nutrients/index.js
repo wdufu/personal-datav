@@ -3,6 +3,7 @@ var $ = require('jquery');
 var _ = require('lodash');
 var Chart = require('echarts');
 var app = require('./dat.gui.js');
+var originData = require('./nutrients.json')
 
 /**
  * 马良基础类
@@ -75,50 +76,49 @@ module.exports = Event.extend(function Base(container, config) {
     }, {});
     var groupCategories = [];
     var groupColors = [];
-    $.get('./nutrients.json', function (originData) {
-      var groupMap = {};
-      originData.forEach(function (row) {
-          var groupName = row[indices.group];
-          if (!groupMap.hasOwnProperty(groupName)) {
-              groupMap[groupName] = 1;
-          }
-      });
-  
-      for (var groupName in groupMap) {
-          if (groupMap.hasOwnProperty(groupName)) {
-              groupCategories.push(groupName);
-          }
-      }
-      var hStep = Math.round(300 / (groupCategories.length - 1));
-      for (var i = 0; i < groupCategories.length; i++) {
+    var groupMap = {};
+    originData.forEach(function (row) {
+        var groupName = row[indices.group];
+        if (!groupMap.hasOwnProperty(groupName)) {
+            groupMap[groupName] = 1;
+        }
+    });
+
+    for (var groupName in groupMap) {
+        if (groupMap.hasOwnProperty(groupName)) {
+            groupCategories.push(groupName);
+        }
+    }
+    var hStep = Math.round(300 / (groupCategories.length - 1));
+    for (var i = 0; i < groupCategories.length; i++) {
         groupColors.push(Chart.color.modifyHSL('#5A94DF', hStep * i));
-      }
-      cfg.visualMap[0]= Object.assign(cfg.visualMap[0], {
+    }
+    cfg.visualMap[0]= Object.assign(cfg.visualMap[0], {
         type: 'piecewise',
         top: 20,
         realtime: false,
         categories: groupCategories,
         inRange: {
-          color: groupColors
+        color: groupColors
         },
         outOfRange: {
-          color: ['#ccc']
+        color: ['#ccc']
         }
-      });
-      cfg.visualMap[1]= Object.assign(cfg.visualMap[1], {
+    });
+    cfg.visualMap[1]= Object.assign(cfg.visualMap[1], {
         max: 1000,
         inRange: {
             colorLightness: [0.15, 0.6]
         }
-      });
-      cfg.series.forEach(function(element) {
-          element.data = data.map(function (item, idx) {
+    });
+    cfg.series.forEach(function(element) {
+        element.data = data.map(function (item, idx) {
             return [item[2], item[3], item[1], idx];
         })
-      });
-      //更新图表
-      self.chart.setOption(cfg);
     });
+    
+    //更新图表
+    self.chart.setOption(cfg);
     app.config = {
         xAxis: 'protein',
         yAxis: 'calcium',
