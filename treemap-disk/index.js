@@ -42,7 +42,7 @@ module.exports = Event.extend(function Base(container, config) {
     //更新图表
     //this.chart.render(data, cfg);
     cfg.levels.forEach(function (element) {
-      element.colorSaturation = [element.colorSaturation.min, element.colorSaturation.max];
+      element.colorSaturation = [element.colorSaturation1.min, element.colorSaturation1.max];
     });
 
     cfg.series.forEach(function (element) {
