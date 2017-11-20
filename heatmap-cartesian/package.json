@@ -149,7 +149,7 @@
             ],
             "default": "category"
           },
-          "data": {
+          "data1": {
             "name": "类目数据",
             "type": "array",
             "default": [
@@ -262,6 +262,23 @@
               }
             }
           },
+          "axisLine": {
+            "name": "x轴设置",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "x轴样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "x轴颜色",
+                    "type": "color",
+                    "default": "#eee"
+                  }
+                }
+              }
+            }
+          },
           "splitArea": {
             "name": "分隔区域",
             "type": "group",
@@ -302,7 +319,7 @@
             ],
             "default": "category"
           },
-          "data": {
+          "data1": {
             "name": "类目数据",
             "type": "array",
             "default": [
@@ -343,6 +360,23 @@
                   "name": "类目值",
                   "type": "text",
                   "default": ""
+                }
+              }
+            }
+          },
+          "axisLine": {
+            "name": "y轴设置",
+            "type": "group",
+            "children": {
+              "lineStyle": {
+                "name": "y轴样式",
+                "type": "group",
+                "children": {
+                  "color": {
+                    "name": "颜色",
+                    "type": "color",
+                    "default": "#eee"
+                  }
                 }
               }
             }
@@ -412,6 +446,17 @@
               }
             ],
             "default": "center"
+          },
+          "textStyle": {
+            "name": "文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              }
+            }
           },
           "bottom": {
             "name": "底部距离",

@@ -50,14 +50,13 @@ module.exports = Event.extend(function Base(container, config) {
       });
     });
 
-    cfg.xAxis.data = cfg.xAxis.data.map(function (element) {
+    cfg.xAxis.data = cfg.xAxis.data1.map(function (element) {
       return element.value;
     });
 
-    cfg.yAxis.data = cfg.yAxis.data.map(function (element) {
+    cfg.yAxis.data = cfg.yAxis.data1.map(function (element) {
       return element.value;
     });
-    console.log(cfg)
     //更新图表
     this.chart.setOption(cfg);
     
