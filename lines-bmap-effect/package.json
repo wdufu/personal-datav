@@ -34,7 +34,7 @@
         "name": "地图配置",
         "type": "group",
         "children": {
-          "center": {
+          "center1": {
             "name": "中心坐标",
             "type": "text",
             "default": "[116.46, 39.92]"

@@ -57,7 +57,7 @@ module.exports = Event.extend(function Base(container, config) {
     cfg.series.forEach(function (element) {
       element.data = formatData;
     });
-    cfg.bmap.center = JSON.parse(cfg.bmap.center);
+    cfg.bmap.center = JSON.parse(cfg.bmap.center1);
     cfg.bmap.mapStyle = {
       styleJson: cfg.bmap.styleJson
     };
