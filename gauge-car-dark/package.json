@@ -130,7 +130,7 @@
           {
             "name": "速度",
             "type": "gauge",
-            "center": {
+            "center1": {
               "x": "50%",
               "y": "50%"
             },
@@ -142,7 +142,7 @@
             "splitNumber": 11,
             "axisLine": {
               "lineStyle": {
-                "color": {
+                "colorGroup": {
                   "color1": {
                     "distance": 0.09,
                     "color": "#00ff00"
@@ -194,7 +194,7 @@
             },
             "title": {
               "show": true,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "-40%"
               },
@@ -214,7 +214,7 @@
               "borderColor": "#fff",
               "shadowColor": "#fff",
               "shadowBlur": 5,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "50%"
               },
@@ -231,7 +231,7 @@
           {
             "name": "转速",
             "type": "gauge",
-            "center": {
+            "center1": {
               "x": "25%",
               "y": "55%"
             },
@@ -243,7 +243,7 @@
             "splitNumber": 7,
             "axisLine": {
               "lineStyle": {
-                "color": {
+                "colorGroup": {
                   "color1": {
                     "distance": 0.29,
                     "color": "#00ff00"
@@ -295,7 +295,7 @@
             },
             "title": {
               "show": true,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "-30%"
               },
@@ -315,7 +315,7 @@
               "borderColor": "#fff",
               "shadowColor": "#fff",
               "shadowBlur": 5,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 25,
                 "y": "20%"
               },
@@ -332,7 +332,7 @@
           {
             "name": "油表",
             "type": "gauge",
-            "center": {
+            "center1": {
               "x": "75%",
               "y": "50%"
             },
@@ -344,7 +344,7 @@
             "splitNumber": 2,
             "axisLine": {
               "lineStyle": {
-                "color": {
+                "colorGroup": {
                   "color1": {
                     "distance": 0.2,
                     "color": "#00ff00"
@@ -396,7 +396,7 @@
             },
             "title": {
               "show": false,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "-40%"
               },
@@ -416,7 +416,7 @@
               "borderColor": "#fff",
               "shadowColor": "#fff",
               "shadowBlur": 5,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "50%"
               },
@@ -433,7 +433,7 @@
           {
             "name": "水表",
             "type": "gauge",
-            "center": {
+            "center1": {
               "x": "75%",
               "y": "50%"
             },
@@ -445,7 +445,7 @@
             "splitNumber": 2,
             "axisLine": {
               "lineStyle": {
-                "color": {
+                "colorGroup": {
                   "color1": {
                     "distance": 0.2,
                     "color": "#00ff00"
@@ -497,7 +497,7 @@
             },
             "title": {
               "show": false,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "-40%"
               },
@@ -517,7 +517,7 @@
               "borderColor": "#fff",
               "shadowColor": "#fff",
               "shadowBlur": 5,
-              "offsetCenter": {
+              "offsetCenter1": {
                 "x": 0,
                 "y": "50%"
               },
@@ -541,7 +541,7 @@
               "type": "text",
               "default": ""
             },
-            "center": {
+            "center1": {
               "name": "位置",
               "type": "group",
               "children": {
@@ -595,7 +595,7 @@
                   "name": "样式",
                   "type": "group",
                   "children": {
-                    "color": {
+                    "colorGroup": {
                       "name": "颜色分段",
                       "type": "group",
                       "children": {
@@ -814,7 +814,7 @@
                   "type": "boolean",
                   "default": true
                 },
-                "offsetCenter": {
+                "offsetCenter1": {
                   "name": "偏移位置",
                   "type": "group",
                   "children": {
@@ -934,7 +934,7 @@
                   "type": "number",
                   "default": 0
                 },
-                "offsetCenter": {
+                "offsetCenter1": {
                   "name": "偏移位置",
                   "type": "group",
                   "children": {

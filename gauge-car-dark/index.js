@@ -14,6 +14,7 @@ module.exports = Event.extend(function Base(container, config) {
   this.apis = config.apis;                 //hook一定要有
   this._data = null;                       //数据
   this.chart = null;                       //图表
+  this.timer = null;                       //定时器
   this.init(config);
 }, {
   /**
@@ -40,13 +41,13 @@ module.exports = Event.extend(function Base(container, config) {
     data = this.data(data);
     var cfg = this.mergeConfig(config);
     cfg.series.forEach(function (element, index) {
-      element.center = [element.center.x, element.center.y];
-      element.title.offsetCenter = [element.title.offsetCenter.x, element.title.offsetCenter.y];
-      element.detail.offsetCenter = [element.detail.offsetCenter.x, element.detail.offsetCenter.y];
+      element.center = [element.center1.x, element.center1.y];
+      element.title.offsetCenter = [element.title.offsetCenter1.x, element.title.offsetCenter1.y];
+      element.detail.offsetCenter = [element.detail.offsetCenter1.x, element.detail.offsetCenter1.y];
       element.axisLine.lineStyle.color = [
-        [element.axisLine.lineStyle.color.color1.distance, element.axisLine.lineStyle.color.color1.color],
-        [element.axisLine.lineStyle.color.color2.distance, element.axisLine.lineStyle.color.color2.color],
-        [element.axisLine.lineStyle.color.color3.distance, element.axisLine.lineStyle.color.color3.color],
+        [element.axisLine.lineStyle.colorGroup.color1.distance, element.axisLine.lineStyle.colorGroup.color1.color],
+        [element.axisLine.lineStyle.colorGroup.color2.distance, element.axisLine.lineStyle.colorGroup.color2.color],
+        [element.axisLine.lineStyle.colorGroup.color3.distance, element.axisLine.lineStyle.colorGroup.color3.color],
       ]
       if (index === 2 ) {
         element.axisLabel.formatter =  function(v) {
@@ -70,8 +71,10 @@ module.exports = Event.extend(function Base(container, config) {
         value: element.data.value, 
         name: element.data.name}];
     });
-    
-    setInterval(function (){
+    if (this.timer) {
+      window.clearInterval(this.timer);
+    }
+    this.timer = setInterval(function (){
       cfg.series.forEach(function (element, index) {
         if (index === 0) {
           element.data = [{
@@ -91,11 +94,9 @@ module.exports = Event.extend(function Base(container, config) {
       });
       this.chart.setOption(cfg);
     }.bind(this), 2000)
-    console.log(cfg)
-    this.chart.setOption(cfg);
 
     //更新图表
-    //this.chart.render(data, cfg);
+    // this.chart.render(data, cfg);
     // this.container.html(data[0].value)
     //如果有需要的话,更新样式
     this.updateStyle();
