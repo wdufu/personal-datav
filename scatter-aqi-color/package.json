@@ -449,18 +449,18 @@
                 "color": "#fff"
             },
             "inRange": {
-                "symbolSize": "[10, 90]"
+                "symbolSize": [10, 90]
             },
             "outOfRange": {
-                "symbolSize": "[10, 70]",
+                "symbolSize": [10, 70],
                 "color": "rgba(255,255,255,.2)"
             },
             "controller": {
                 "inRange": {
-                    "color": "#c23531"
+                  "color1": "#c23531"
                 },
                 "outOfRange": {
-                    "color": "#444"
+                  "color1": "#444"
                 }
             }
           },
@@ -480,17 +480,17 @@
                 "color": "#fff"
             },
             "inRange": {
-                "colorLightness": "[1, 0.5]"
+                "colorLightness": [1, 0.5]
             },
             "outOfRange": {
                 "color": "rgba(255,255,255,.2)"
             },
             "controller": {
                 "inRange": {
-                    "color": "#c23531"
+                  "color1": "#c23531"
                 },
                 "outOfRange": {
-                    "color": "#444"
+                  "color1": "#444"
                 }
             }
           }
@@ -517,16 +517,6 @@
                 }
               ],
               "default": "right"
-            },
-            "top": {
-              "name": "上侧距离",
-              "type": "text",
-              "default": ""
-            },
-            "bottom": {
-              "name": "下侧距离",
-              "type": "text",
-              "default": ""
             },
             "dimension": {
               "name": "数据维度",
@@ -584,38 +574,6 @@
                 }
               }
             },
-            "inRange": {
-              "name": "选中元素",
-              "type": "group",
-              "children": {
-                "symbolSize": {
-                  "name": "图元的大小",
-                  "type": "text",
-                  "default": ""
-                },
-                "colorLightness": {
-                  "name": "颜色的明暗度",
-                  "type": "text",
-                  "default": ""
-                }
-              }
-            },
-            "outOfRange": {
-              "name": "未选中元素",
-              "type": "group",
-              "children": {
-                "symbolSize": {
-                  "name": "图元的大小",
-                  "type": "text",
-                  "default": ""
-                },
-                "color": {
-                  "name": "图元颜色",
-                  "type": "color",
-                  "default": ""
-                }
-              }
-            },
             "controller": {
               "name": "关联控制器",
               "type": "group",
@@ -624,7 +582,7 @@
                   "name": "未选中元素",
                   "type": "group",
                   "children": {
-                    "color": {
+                    "color1": {
                       "name": "图元颜色",
                       "type": "color",
                       "default": ""
@@ -635,7 +593,7 @@
                   "name": "未选中元素",
                   "type": "group",
                   "children": {
-                    "color": {
+                    "color1": {
                       "name": "图元颜色",
                       "type": "color",
                       "default": ""

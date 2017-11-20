@@ -68,19 +68,19 @@ module.exports = Event.extend(function Base(container, config) {
     cfg.visualMap.forEach(function (element) {
       var text = element.text;
       element.text = [text];
-      if (element.inRange.symbolSize) {
-        element.inRange.symbolSize = JSON.parse(element.inRange.symbolSize);
-      }
-      if (element.inRange.colorLightness) {
-        element.inRange.colorLightness = JSON.parse(element.inRange.colorLightness);
-      }
-      if (element.outOfRange.symbolSize) {
-        element.outOfRange.symbolSize = JSON.parse(element.outOfRange.symbolSize);
-      }
+      // if (element.inRange.symbolSize) {
+      //   element.inRange.symbolSize = JSON.parse(element.inRange.symbolSize);
+      // }
+      // if (element.inRange.colorLightness) {
+      //   element.inRange.colorLightness = JSON.parse(element.inRange.colorLightness);
+      // }
+      // if (element.outOfRange.symbolSize) {
+      //   element.outOfRange.symbolSize = JSON.parse(element.outOfRange.symbolSize);
+      // }
       var outOfRangeColor = element.outOfRange.color;
       element.outOfRange.color = [outOfRangeColor];
-      element.controller.inRange.color = [element.controller.inRange.color];
-      element.controller.outOfRange.color = [element.controller.outOfRange.color];
+      element.controller.inRange.color = [element.controller.inRange.color1];
+      element.controller.outOfRange.color = [element.controller.outOfRange.color1];
     })
     cfg.tooltip.formatter = function (obj) {
       var value = obj.value;
