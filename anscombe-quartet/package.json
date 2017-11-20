@@ -147,22 +147,42 @@
           {
             "gridIndex": 0,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 1,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 2,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 3,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           }
         ],
         "child": {
@@ -183,6 +203,23 @@
               "name": "坐标轴刻度最大值",
               "type": "number",
               "default": 0
+            },
+            "axisLine": {
+              "name": "x轴轴线",
+              "type": "group",
+              "children": {
+                "lineStyle": {
+                  "name": "样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#333"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -194,22 +231,42 @@
           {
             "gridIndex": 0,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 1,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 2,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           },
           {
             "gridIndex": 3,
             "min": 0,
-            "max": 20
+            "max": 20,
+            "axisLine": {
+              "lineStyle": {
+                "color": "#333"
+              }
+            }
           }
         ],
         "child": {
@@ -230,6 +287,23 @@
               "name": "坐标轴刻度最大值",
               "type": "number",
               "default": 0
+            },
+            "axisLine": {
+              "name": "y轴轴线",
+              "type": "group",
+              "children": {
+                "lineStyle": {
+                  "name": "样式",
+                  "type": "group",
+                  "children": {
+                    "color": {
+                      "name": "颜色",
+                      "type": "color",
+                      "default": "#333"
+                    }
+                  }
+                }
+              }
             }
           }
         }
