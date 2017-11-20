@@ -141,6 +141,37 @@
             "type": "boolean",
             "default": true
           },
+          "padding": {
+            "name": "内边距",
+            "type": "number",
+            "default": 10
+          },
+          "backgroundColor": {
+            "name": "背景色",
+            "type": "color",
+            "default": "#222"
+          },
+          "borderColor": {
+            "name": "边框色",
+            "type": "color",
+            "default": "#777"
+          },
+          "borderWidth": {
+            "name": "边框宽度",
+            "type": "number",
+            "default": 1
+          },
+          "textStyle": {
+            "name": "文字样式",
+            "type": "group",
+            "children": {
+              "color": {
+                "name": "颜色",
+                "type": "color",
+                "default": "#fff"
+              }
+            }
+          },
           "trigger": {
             "name": "触发类型",
             "type": "text",
