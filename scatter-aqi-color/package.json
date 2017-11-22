@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "dependencies": {
     "bcore": "0.0.18",
-    "echarts": "^3.4.0",
+    "echarts": "3.4.0",
     "jquery": "2.1.4",
     "lodash": "4.6.1"
   },
