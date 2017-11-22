@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "dependencies": {
     "bcore": "0.0.18",
-    "echarts": "^3.8.0",
+    "echarts": "^3.4.0",
     "jquery": "2.1.4",
     "lodash": "4.6.1"
   },
@@ -39,6 +39,11 @@
         "name": "背景颜色",
         "type": "color",
         "default": "#2c343c"
+      },
+      "pointColor": {
+        "name": "散点颜色",
+        "type": "color",
+        "default": "#5A94DF"
       },
       "tooltip": {
         "name": "提示框",
@@ -212,6 +217,7 @@
         "type": "array",
         "default": [
           {
+            "right": 30,
             "show": false,
             "dimension": 2,
             "textStyle": {
@@ -219,6 +225,7 @@
             }
           },
           {
+            "right": 0,
             "show": false,
             "dimension": 3,
             "textStyle": {
@@ -234,6 +241,11 @@
               "name": "显示",
               "type": "boolean",
               "default": false
+            },
+            "right": {
+              "name": "右侧距离",
+              "type": "number",
+              "default": 0
             },
             "dimension": {
               "name": "数据维度",

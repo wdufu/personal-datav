@@ -91,7 +91,7 @@ module.exports = Event.extend(function Base(container, config) {
     }
     var hStep = Math.round(300 / (groupCategories.length - 1));
     for (var i = 0; i < groupCategories.length; i++) {
-        groupColors.push(Chart.color.modifyHSL('#5A94DF', hStep * i));
+        groupColors.push(Chart.color.modifyHSL(cfg.pointColor, hStep * i));
     }
     cfg.visualMap[0]= Object.assign(cfg.visualMap[0], {
         type: 'piecewise',
