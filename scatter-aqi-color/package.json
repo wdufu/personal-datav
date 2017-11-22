@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/scatter-aqi-color",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "^3.7.2",
