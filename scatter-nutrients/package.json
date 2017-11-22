@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/scatter-nutrients",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "^3.8.0",
@@ -9,7 +9,9 @@
   },
   "datav": {
     "cn_name": "可选轴线内容",
-    "icon": "",
+    "icon": {
+      "316x238": "/icons/316x238icon.png?time=1511347106813"
+    },
     "protocol": 2,
     "type": [
       "regular_scatter"
@@ -18,7 +20,8 @@
       "width": "800",
       "height": "600",
       "minWidth": "200",
-      "minHeight": "100"
+      "minHeight": "100",
+      "z-index": 1010
     },
     "apis": {
       "source": {
@@ -72,11 +75,6 @@
         "name": "x轴",
         "type": "group",
         "children": {
-          "name": {
-            "name": "x轴名称",
-            "type": "text",
-            "default": "protein"
-          },
           "splitLine": {
             "name": "x轴分隔线",
             "type": "group",
@@ -145,11 +143,6 @@
         "name": "y轴",
         "type": "group",
         "children": {
-          "name": {
-            "name": "y轴名称",
-            "type": "text",
-            "default": "calcium"
-          },
           "splitLine": {
             "name": "y轴分隔线",
             "type": "group",
