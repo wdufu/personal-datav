@@ -1,0 +1,338 @@
+[WARN] loading static_dir's package.json failed
+datav-cli 最新版本为1.0.0, 本地版本为0.2.1
+请升级 -- npm install -g datav-cli@latest
+{ Error: ENOENT: no such file or directory, scandir '/home/workspace/personal-datav/scatter-nutrients/children'
+    at Object.fs.readdirSync (fs.js:914:18)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/router.js:49:28
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/express/lib/router/index.js:176:3)
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/workspace/personal-datav/scatter-nutrients/children' }
+(node:17408) DeprecationWarning: 'root' is deprecated, use 'global'
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rdata-editor.jsx
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rconfig-editor.jsx
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rconfig-editor.jsx
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rconfig-editor.jsx
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rpublish-editor.jsx
+[CUBE_WARN] require path: /react-maliang-editor not found in file: /js/rresize-editor.jsx
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[CUBE]`/dat.gui.js.map` unmatch file type, query will passed to connect.static handler
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[INFO] loaded static_dir's package.json
+[CUBE]`/nutrients.json` unmatch file type, query will passed to connect.static handler
+[INFO] loaded static_dir's package.json
+[CUBE]`/favicon.ico` unmatch file type, query will passed to connect.static handler
+                                                                             
+                                                                             
+          ___           ___           ___           ___           ___        
+         /\  \         /\  \         /\  \         /\  \         /\__\       
+        /::\  \       /::\  \        \:\  \       /::\  \       /:/  /       
+       /:/\:\  \     /:/\:\  \        \:\  \     /:/\:\  \     /:/  /        
+      /:/  \:\__\   /::\~\:\  \       /::\  \   /::\~\:\  \   /:/__/  ___    
+     /:/__/ \:|__| /:/\:\ \:\__\     /:/\:\__\ /:/\:\ \:\__\  |:|  | /\__\   
+     \:\  \ /:/  / \/__\:\/:/  /    /:/  \/__/ \/__\:\/:/  /  |:|  |/:/  /   
+      \:\  /:/  /       \::/  /    /:/  /           \::/  /   |:|__/:/  /    
+       \:\/:/  /        /:/  /     \/__/            /:/  /     \::::/__/     
+        \::/__/        /:/  /                      /:/  /       ~~~~         
+         ~~            \/__/                       \/__/                     
+                                                                             
+                                                                             
+
+
+如果您感觉检查版本号非常慢，建议您配置npm镜像: npm config set registry http://registry.cnpmjs.org, 也可以使用您自己喜欢的镜像.
+[Mon Nov 20 2017 19:12:30 GMT+0800 (CST)] [INFO]  "本地为最新版本1.0.0"
+[Mon Nov 20 2017 19:12:30 GMT+0800 (CST)] [INFO]  "起服务中..."
+[Mon Nov 20 2017 19:12:30 GMT+0800 (CST)] [INFO]  "服务启动，如果浏览器还没打开，麻烦手动用chrome浏览器打开localhost:2234"
+                                                                             
+                                                                             
+          ___           ___           ___           ___           ___        
+         /\  \         /\  \         /\  \         /\  \         /\__\       
+        /::\  \       /::\  \        \:\  \       /::\  \       /:/  /       
+       /:/\:\  \     /:/\:\  \        \:\  \     /:/\:\  \     /:/  /        
+      /:/  \:\__\   /::\~\:\  \       /::\  \   /::\~\:\  \   /:/__/  ___    
+     /:/__/ \:|__| /:/\:\ \:\__\     /:/\:\__\ /:/\:\ \:\__\  |:|  | /\__\   
+     \:\  \ /:/  / \/__\:\/:/  /    /:/  \/__/ \/__\:\/:/  /  |:|  |/:/  /   
+      \:\  /:/  /       \::/  /    /:/  /           \::/  /   |:|__/:/  /    
+       \:\/:/  /        /:/  /     \/__/            /:/  /     \::::/__/     
+        \::/__/        /:/  /                      /:/  /       ~~~~         
+         ~~            \/__/                       \/__/                     
+                                                                             
+                                                                             
+
+
+如果您感觉检查版本号非常慢，建议您配置npm镜像: npm config set registry http://registry.cnpmjs.org, 也可以使用您自己喜欢的镜像.
+[Mon Nov 20 2017 22:40:37 GMT+0800 (CST)] [INFO]  "本地为最新版本1.0.0"
+[Mon Nov 20 2017 22:40:37 GMT+0800 (CST)] [INFO]  "起服务中..."
+[Mon Nov 20 2017 22:40:37 GMT+0800 (CST)] [INFO]  "服务启动，如果浏览器还没打开，麻烦手动用chrome浏览器打开localhost:2234"
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+                                                                             
+                                                                             
+          ___           ___           ___           ___           ___        
+         /\  \         /\  \         /\  \         /\  \         /\__\       
+        /::\  \       /::\  \        \:\  \       /::\  \       /:/  /       
+       /:/\:\  \     /:/\:\  \        \:\  \     /:/\:\  \     /:/  /        
+      /:/  \:\__\   /::\~\:\  \       /::\  \   /::\~\:\  \   /:/__/  ___    
+     /:/__/ \:|__| /:/\:\ \:\__\     /:/\:\__\ /:/\:\ \:\__\  |:|  | /\__\   
+     \:\  \ /:/  / \/__\:\/:/  /    /:/  \/__/ \/__\:\/:/  /  |:|  |/:/  /   
+      \:\  /:/  /       \::/  /    /:/  /           \::/  /   |:|__/:/  /    
+       \:\/:/  /        /:/  /     \/__/            /:/  /     \::::/__/     
+        \::/__/        /:/  /                      /:/  /       ~~~~         
+         ~~            \/__/                       \/__/                     
+                                                                             
+                                                                             
+
+
+如果您感觉检查版本号非常慢，建议您配置npm镜像: npm config set registry http://registry.cnpmjs.org, 也可以使用您自己喜欢的镜像.
+[Wed Nov 22 2017 19:39:29 GMT+0800 (CST)] [INFO]  "本地为最新版本1.0.0"
+[Wed Nov 22 2017 19:39:29 GMT+0800 (CST)] [INFO]  "起服务中..."
+[Wed Nov 22 2017 19:39:29 GMT+0800 (CST)] [INFO]  "服务启动，如果浏览器还没打开，麻烦手动用chrome浏览器打开localhost:2234"
+                                                                             
+                                                                             
+          ___           ___           ___           ___           ___        
+         /\  \         /\  \         /\  \         /\  \         /\__\       
+        /::\  \       /::\  \        \:\  \       /::\  \       /:/  /       
+       /:/\:\  \     /:/\:\  \        \:\  \     /:/\:\  \     /:/  /        
+      /:/  \:\__\   /::\~\:\  \       /::\  \   /::\~\:\  \   /:/__/  ___    
+     /:/__/ \:|__| /:/\:\ \:\__\     /:/\:\__\ /:/\:\ \:\__\  |:|  | /\__\   
+     \:\  \ /:/  / \/__\:\/:/  /    /:/  \/__/ \/__\:\/:/  /  |:|  |/:/  /   
+      \:\  /:/  /       \::/  /    /:/  /           \::/  /   |:|__/:/  /    
+       \:\/:/  /        /:/  /     \/__/            /:/  /     \::::/__/     
+        \::/__/        /:/  /                      /:/  /       ~~~~         
+         ~~            \/__/                       \/__/                     
+                                                                             
+                                                                             
+
+
+如果您感觉检查版本号非常慢，建议您配置npm镜像: npm config set registry http://registry.cnpmjs.org, 也可以使用您自己喜欢的镜像.
+[Thu Nov 23 2017 14:48:32 GMT+0800 (CST)] [WARN]  "datav-cli 最新版本为1.0.1, 本地版本为1.0.0"
+[Thu Nov 23 2017 14:48:32 GMT+0800 (CST)] [WARN]  "请升级 -- tnpm install -g datav-cli@latest"
+[Thu Nov 23 2017 14:48:32 GMT+0800 (CST)] [INFO]  "起服务中..."
+[Thu Nov 23 2017 14:48:32 GMT+0800 (CST)] [INFO]  "服务启动，如果浏览器还没打开，麻烦手动用chrome浏览器打开localhost:2234"

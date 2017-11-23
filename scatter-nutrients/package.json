@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/scatter-nutrients",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "3.4.0",
