@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/anscombe-quartet",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "^3.7.2",
@@ -9,16 +9,19 @@
   },
   "datav": {
     "cn_name": "线性回归",
-    "icon": "",
+    "icon": {
+      "316x238": "/icons/316x238icon.png?time=1511346928595"
+    },
     "protocol": 2,
     "type": [
-      ""
+      "regular_scatterplot"
     ],
     "view": {
       "width": "800",
       "height": "600",
       "minWidth": "200",
-      "minHeight": "100"
+      "minHeight": "100",
+      "z-index": 1010
     },
     "apis": {
       "source": {

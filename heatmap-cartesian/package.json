@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/heatmap-cartesian",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "^3.8.5",
@@ -9,7 +9,9 @@
   },
   "datav": {
     "cn_name": "热力图",
-    "icon": "",
+    "icon": {
+      "316x238": "/icons/316x238icon.png?time=1511366565298"
+    },
     "protocol": 2,
     "type": [
       "regular_heatmap"
@@ -18,7 +20,8 @@
       "width": "800",
       "height": "600",
       "minWidth": "200",
-      "minHeight": "100"
+      "minHeight": "100",
+      "z-index": 1010
     },
     "apis": {
       "source": {
@@ -126,29 +129,6 @@
         "name": "x轴",
         "type": "group",
         "children": {
-          "type": {
-            "name": "x轴类型",
-            "type": "select",
-            "options": [
-              {
-                "name": "数值轴",
-                "value": "value"
-              },
-              {
-                "name": "类目轴",
-                "value": "category"
-              },
-              {
-                "name": "时间轴",
-                "value": "time"
-              },
-              {
-                "name": "对数轴",
-                "value": "log"
-              }
-            ],
-            "default": "category"
-          },
           "data1": {
             "name": "类目数据",
             "type": "array",
@@ -296,29 +276,6 @@
         "name": "y轴",
         "type": "group",
         "children": {
-          "type": {
-            "name": "y轴类型",
-            "type": "select",
-            "options": [
-              {
-                "name": "数值轴",
-                "value": "value"
-              },
-              {
-                "name": "类目轴",
-                "value": "category"
-              },
-              {
-                "name": "时间轴",
-                "value": "time"
-              },
-              {
-                "name": "对数轴",
-                "value": "log"
-              }
-            ],
-            "default": "category"
-          },
           "data1": {
             "name": "类目数据",
             "type": "array",
