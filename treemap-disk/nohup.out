@@ -267,3 +267,14 @@ TypeError: Cannot create property '316x238' on string ''
     at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
     at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
     at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)

@@ -244,3 +244,14 @@ TypeError: Cannot create property '316x238' on string ''
 [Thu Nov 23 2017 16:24:02 GMT+0800 (CST)] [WARN]  "请升级 -- tnpm install -g datav-cli@latest"
 [Thu Nov 23 2017 16:24:02 GMT+0800 (CST)] [INFO]  "起服务中..."
 [Thu Nov 23 2017 16:24:02 GMT+0800 (CST)] [INFO]  "服务启动，如果浏览器还没打开，麻烦手动用chrome浏览器打开localhost:5002"
+TypeError: Cannot create property '316x238' on string ''
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/libs/common/router.js:97:36
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/layer.js:95:5)
+    at /root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:277:22
+    at Function.process_params (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:330:12)
+    at next (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:271:10)
+    at Function.handle (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:176:3)
+    at router (/root/.nvm/v7.10.1/lib/node_modules/datav-cli/node_modules/_express@4.13.4@express/lib/router/index.js:46:12)
