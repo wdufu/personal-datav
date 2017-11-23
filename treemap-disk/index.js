@@ -77,10 +77,10 @@ module.exports = Event.extend(function Base(container, config) {
   resize: function (width, height) {
     this.updateLayout(width, height);
     //更新图表
-    //this.chart.render({
-    //  width: width,
-    //  height: height
-    //})
+    this.chart.resize({
+      width: width,
+      height: height
+    })
   },
   /**
    * 每个组件根据自身需要,从主题中获取颜色 覆盖到自身配置的颜色中.

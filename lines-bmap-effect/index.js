@@ -76,9 +76,9 @@ module.exports = Event.extend(function Base(container, config) {
   resize: function (width, height) {
     this.updateLayout(width, height);
     //更新图表
-    this.chart.render({
-     width: width,
-     height: height
+    this.chart.resize({
+      width: width,
+      height: height
     })
   },
   /**
