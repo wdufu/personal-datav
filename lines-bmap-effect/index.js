@@ -3,7 +3,7 @@ var $ = require('jquery');
 var _ = require('lodash');
 var Chart = require('echarts');
 require('./api.js');
-require('echarts/dist/extension/bmap.min');
+require('./bmap/bmap.js');
 /**
  * 马良基础类
  */
