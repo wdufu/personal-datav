@@ -1,6 +1,6 @@
 {
   "name": "@dkbike/lines-bmap-effect",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "bcore": "0.0.18",
     "echarts": "^3.8.5",
