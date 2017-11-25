@@ -42,8 +42,8 @@ module.exports = Event.extend(function Base(container, config) {
     var cfg = this.mergeConfig(config);
     cfg.series.forEach(function(element) {
       element.data = element.data || [];
-      element.markLine.tooltip = element.markLine.tooltip || '';
-      element.markLine.label.tooltip = element.markLine.label.tooltip || '';
+      element.markLine.tooltip = element.markLine.tooltip || {};
+      element.markLine.label.normal.formatter= element.markLine.label.normal.formatter || '';
       var dataArr = [];
       data.forEach(function(item) {
         var itemArr = [];
@@ -78,8 +78,8 @@ module.exports = Event.extend(function Base(container, config) {
       }
       var b = Lxy / Lxx;
       var a = ya - b * xa;
-      element.markLine.tooltip = 'y = ' + b.toFixed(1) + ' * x + ' + a.toFixed(1);
-      element.markLine.label.tooltip = 'y = ' + b.toFixed(1) + ' * x + ' + a.toFixed(1);
+      element.markLine.tooltip.formatter= 'y = ' + b.toFixed(1) + ' * x + ' + a.toFixed(1);
+      element.markLine.label.normal.formatter = 'y = ' + b.toFixed(1) + ' * x + ' + a.toFixed(1);
     })
     //更新图表
     this.chart.setOption(cfg);

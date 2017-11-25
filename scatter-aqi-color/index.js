@@ -39,7 +39,7 @@ module.exports = Event.extend(function Base(container, config) {
   render: function (data, config) {
     data = this.data(data);
     var cfg = this.mergeConfig(config);
-    cfg.color = cfg.color.map(function (item) {
+    cfg.color = cfg.colorGroup.map(function (item) {
       return item.value;
     })
     cfg.series.forEach(function (element) {
